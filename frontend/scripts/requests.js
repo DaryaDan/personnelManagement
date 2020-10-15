@@ -1,5 +1,6 @@
 async function GetAll() {
-    const url = `http://localhost:3000/products1`;
+  // для регистрации
+    const url = `http://localhost:3000/products`;
     const res = await fetch(url, {
       method: 'GET',
           headers: {
@@ -62,7 +63,7 @@ async function UpdateOne(personID,personID_new,fullName,email,phone,img,birthday
   }
 
 async function AddOne(personID_new,fullName,email,phone,img,birthday,position,roots,password,affairs) {
-const url = `http://localhost:3000/products1`;
+const url = `http://localhost:3000/products`;
   const body = {
     personID: `${personID_new}`,
     fullName: `${fullName}`,

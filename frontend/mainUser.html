@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="style.css" rel="stylesheet">
-<title>Главная</title>
+<title>Главная пользователя</title>
 <link rel="icon" href="#" type="image/x-icon">
 </head>
 <body>
@@ -16,7 +16,16 @@
 
     <nav id="nav" class="nav">
         <ul class="menu">
-          <li><a href="#">О компании</a></li>
+          <li><a href="#">Личный кабинет</a></li>
+          <li><a href="#">Мои коллеги</a></li>
+            <li class="p_menu"><a class = "link">Мои задачи</a>
+                <ul class="v_menu">
+                  <li><a target="_blank" href="#">Новые</a></li>
+                  <li><a target="_blank" href="#">В процессе</a></li>
+                  <li><a target="_blank" href="#">Завершенные</a></li>
+                </ul>
+            </li>
+            <li><a href="#">О компании</a></li>
             <li><a href="registration.html" id="butExit">Вход</a></li>
               </ul>
       </nav>
@@ -25,8 +34,22 @@
       <p class="dropdown"><img src="https://www.meme-arsenal.com/memes/93da8ee2c78577c10aa5dbe102b7ae65.jpg" alt="Логотип"></p>
       <h3 class="dropdown">RS Lang</h3>
       <span class = "contener">
+        <div class="dropdown">
+        <a href="#" class="dropbtn">Личный кабинет</a>
+        </div>
     <div class="dropdown">
-  <a href="#" class="dropbtn">О компании</a>
+  <a href="#" class="dropbtn">Мои коллеги</a>
+    </div>
+    <div class="dropdown">
+      <button class="dropbtn">Мои задачи</button>
+      <div class="dropdown-content">
+        <a target="_blank" href="#">Новые</a>
+        <a target="_blank" href="#">В процессе</a>
+        <a target="_blank" href="#">Завершенные</a>
+      </div>
+    </div>
+    <div class="dropdown">
+    <a href="#" class="dropbtn">О компании</a>
     </div>
     <div class="dropdown">
       <button class="button-input" id = "but-autorization" data-hover="Выход" onclick="changePage()"><a id = "autorization" onclick="changePage('../../authorization/src/index.html')">Вход</a></button>
@@ -34,6 +57,7 @@
   </span>
   </div>
   </header>
+
 
   <footer class="footer-distributed">
           <div class="footer-left">
