@@ -1,4 +1,4 @@
--document.onclick = function change() {
+document.onclick = function change() {
   if (event.target.className !== 'p_menu' && event.target.className !== 'link' && event.target.className !== 'nav-toggle expanded' && event.target.className !== 'nav-toggle-bar') {
     document.querySelector('.nav-toggle').classList.remove('expanded');
     document.querySelector('#nav').classList.remove('expanded');
@@ -39,6 +39,9 @@ if (localStorage.getItem('email') !== null) {
   document.getElementById('autorization').textContent = localStorage.name;
   document.getElementById('but-autorization').classList.add('button-input-autorization');
   document.getElementById('butExit').textContent = 'Выход';
+  document.getElementById('butExit').onclick = function remove() {
+    deleteInform();
+  };
   document.getElementById('but-autorization').onclick = function remove() {
     deleteInform();
   };
