@@ -11,62 +11,63 @@
 <body>
   <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
 <div class="wrap_bg">
-    <div id="main" class="login_wrap singUpActive">
+    <div id="main" class="login_wrap loginActive">
         <div class="login_question_wrap">
             <div class="question_singUp ">
-                <h2 class="title">Don't have an account?</h2>
-                <p>Lorem ipsum dolor sit ames
-                    lorem ipsum dolor sit ames
-                    lorem ipsum dolor sit ames
-                    lorem ipsum dolor sit ames
+                <h2 class="title">Нет аккаунта?</h2>
+                <p>Попросите главного зарегистрировать
+                  вас или используйте временный
+                  код для регистрации
                 </p>
-                <a href="javascript:void(0)" id="signUpBtn" class="btn btn_rounded">Sing up</a>
+                <a href="javascript:void(0)" id="signUpBtn" class="btn btn_rounded">Зарегистрироваться</a>
             </div>
             <div class="question_login ">
-                <h2 class="title">Have an account?</h2>
-                <p>Lorem ipsum dolor sit ames
-                    lorem ipsum dolor sit ames
-                    lorem ipsum dolor sit ames
-                    lorem ipsum dolor sit ames
+                <h2 class="title">Есть аккаунт?</h2>
+                <p>Войдите в аккаунт, используя свою почту и пароль
                 </p>
-                <a href="javascript:void(0)" id="loginBtn" class="btn btn_rounded">Log in</a>
+                <a href="javascript:void(0)" id="loginBtn" class="btn btn_rounded">Войти</a>
             </div>
             <div class="action_singUp">
-                <form action="#">
+                <form onsubmit="return false;">
                     <fieldset>
-                        <legend class="title">Sing Up</legend>
+                        <legend class="title">Регистрация</legend>
                         <div class="input_block">
                             <div class="input_wrap">
-                                <input type="text" id="sing_name" class="input" placeholder="Full Name">
+                                <input type="text" id="sing_name" class="input" placeholder="ФИО" required>
                                 <label for="sing_name" class="label_name"></label>
                             </div>
                             <div class="input_wrap">
-                                <input type="email" id="sing_email" class="input" placeholder="Email">
+                                <input type="email" id="sing_email" class="input" placeholder="Почта" required>
                                 <label for="sing_email" class="label_mail"></label>
                             </div>
                             <div class="input_wrap">
-                                <input type="text" id="sing_pass" class="input" placeholder="Password">
+                                <input type="text" id="sing_pass" class="input" placeholder="Пароль" required>
                                 <label for="sing_pass" class="label_pass"></label>
                             </div>
+                            <div class="input_wrap">
+                                <input type="text" id="code" class="input" placeholder="Временный код" required>
+                                <label for="sing_code" class="label_code"></label>
+                            </div>
                         </div>
-                        <input type="submit" value="Sing Up" class="btn btn_red">
+                        <span class="stage1"></span>
+                        <input type="submit" value="Зарегистрироваться" id="singup" class="btn btn_red">
                     </fieldset>
                 </form>
             </div>
             <div class="action_login">
               <form onsubmit="return false;">
                     <fieldset>
-                        <legend class="title">Log in</legend>
+                        <legend class="title">Вход</legend>
                         <div class="input_block">
                             <div class="input_wrap">
-                                <input type="email" id="mail" class="input" placeholder="Email" required>
+                                <input type="email" id="mail" class="input" placeholder="Почта" required>
                             </div>
                             <div class="input_wrap">
-                                <input type="text" id="pass" class="input" placeholder="Password" required>
+                                <input type="text" id="pass" class="input" placeholder="Пароль" required>
                             </div>
                         </div>
                         <span class="stage"></span>
-                        <input type="submit" value="Login" id="login" class="btn btn_red">
+                        <input type="submit" value="Войти" id="login" class="btn btn_red">
                     </fieldset>
                 </form>
             </div>

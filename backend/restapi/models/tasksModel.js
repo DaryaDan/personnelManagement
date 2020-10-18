@@ -4,7 +4,9 @@ var mongoose = require('mongoose');
 
 var Schema = mongoose.Schema;
 
-var Schema1 = new Schema({
+var Tasks = new Schema({
+
+  manID: { type: Number, Required:  'Product name cannot be left blank.' },
 
   taskID: { type: Number, Required:  'Product name cannot be left blank.' },
 
@@ -20,4 +22,4 @@ var Schema1 = new Schema({
 
 });
 
-module.exports = mongoose.model('Products1', Schema1);
+module.exports = mongoose.model('Tasks', Tasks);

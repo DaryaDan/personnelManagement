@@ -1,6 +1,7 @@
-async function GetAll() {
-  // для регистрации
-    const url = `http://localhost:3000/products`;
+async function GetAll(url1) {
+  // для авторизации
+    const url = url1;
+    console.log(url);
     const res = await fetch(url, {
       method: 'GET',
           headers: {
@@ -10,6 +11,7 @@ async function GetAll() {
     const data = await res.json();
     return data;
   }
+
 
 
 async function DelOne(personID) {
@@ -62,20 +64,10 @@ async function UpdateOne(personID,personID_new,fullName,email,phone,img,birthday
     return data;
   }
 
-async function AddOne(personID_new,fullName,email,phone,img,birthday,position,roots,password,affairs) {
-const url = `http://localhost:3000/products`;
-  const body = {
-    personID: `${personID_new}`,
-    fullName: `${fullName}`,
-    email: `${email}`,
-    phone: `${phone}`,
-    img: `${img}`,
-    birthday: `${birthday}`,
-    position: `${position}`,
-    affairs: `${affairs}`,
-    roots: `${roots}`,
-    password: `${password}`
-  };
+async function AddOne(url1,body1) {
+//для регистрации
+const url = url1;
+const body = body1;
 const res = await fetch(url, {
     method: 'POST',
     headers: {

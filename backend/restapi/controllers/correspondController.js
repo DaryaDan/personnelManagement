@@ -1,10 +1,10 @@
 'use strict';
 
 var mongoose = require('mongoose'),
-    Product = mongoose.model('Products');
+    Correspond = mongoose.model('Correspond');
 
 exports.products = function(req, res) {
-  Product.find({}, function(err, product) {
+  Correspond.find({}, function(err, product) {
     if (err)
       res.send(err);
     res.json(product);
@@ -12,7 +12,7 @@ exports.products = function(req, res) {
 };
 
 exports.add = function(req, res) {
-  var new_product = new Product(req.body);
+  var new_product = new Correspond(req.body);
   new_product.save(function(err, product) {
     if (err)
       res.send(err);
@@ -21,7 +21,7 @@ exports.add = function(req, res) {
 };
 
 exports.getproduct = function(req, res) {
-  Product.find({articul: req.query.articul}, function(err, product) {
+  Correspond.find({articul: req.query.articul}, function(err, product) {
     if (err)
       res.send(err);
     res.json(product);
@@ -30,7 +30,7 @@ exports.getproduct = function(req, res) {
 
 exports.update = function(req, res) {
   var articul = req.query.articul;
-  Product.findOneAndUpdate({articul: articul}, req.body, {new: true}, function(err, product) {
+  Correspond.findOneAndUpdate({articul: articul}, req.body, {new: true}, function(err, product) {
     if (err)
       res.send(err);
     res.json(product);
@@ -39,7 +39,7 @@ exports.update = function(req, res) {
 
 exports.delete = function(req, res) {
   var articul = req.query.articul;
-  Product.remove({
+  Correspond.remove({
     articul: articul
   }, function(err, product) {
     if (err)
