@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link href="style.css" rel="stylesheet">
-<link href="aboutMe.css" rel="stylesheet">
+<link href="../styles/style.css" rel="stylesheet">
+<link href="../styles/aboutMe.css" rel="stylesheet">
 <title>Главная пользователя</title>
 <link rel="icon" href="#" type="image/x-icon">
 </head>
@@ -59,27 +59,45 @@
   </div>
   </header>
 
+  <input type="checkbox" name="showForm" id="showForm" class="showForm">
+  <div class="form">
+    <form>
+      <div class="left section">
+        <input id="changeName" type="text" name="name" placeholder="ФИО">
+        <input id="changeEmail" type="email" name="email" placeholder="Почта">
+        <input id="changePhone" type="tel" name="tel" placeholder="Телефон">
+      </div>
+      <div class="right section">
+        <input id="changePhoto" type="text" name="photo" placeholder="Ссылка на фото">
+        <input id="changePosition" type="text" name="position" placeholder="Должность">
+        <input id="changeBirthday" type="date" name="birthday" placeholder="День рождения">
+      </div>
+      <button type="submit" id="change" class="sendForm left">Изменить</button>
+      <label for="showForm" class="closeFormLabel left">Закрыть</label>
+    </form>
+  </div>
+  <label for="showForm" class="showFormLabel">Редактировать</label>
+
 <main id="main" class="profile-page sidebar-collapse page-header-image" data-parallax="true" style="background-image:url('https://images.unsplash.com/photo-1557053819-aa6046add523?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=889&q=80');">
     <div class="wrapper">
       <div class="page-header" filter-color="orange">
         <div class="container">
-          <div class="photo-container">
-            <img src="https://images.wallpaperscraft.ru/image/kotenok_son_malysh_polosatyy_89331_1280x720.jpg" alt="">
+          <div id="photo" class="photo-container">
           </div>
-          <h3 class="title">Данченко Анна</h3>
-          <p class="category">Веб-разработчик</p>
+          <h3 id="name" class="title"></h3>
+          <p id="category" class="category">Должность не определена</p>
           <div class="content">
             <div class="social-description">
-              <a href="mailto:info@singolo.com"><img class="img1" src="https://i.ibb.co/MSNskr4/convert.png" alt="email"></a>
-              <p class="mailText">darya.danchenko1999@gmail.com</p>
+              <h3>Электронная почта:</h3>
+              <p id="email" class="mailText"></p>
             </div>
             <div class="social-description">
-              <h2>20</h2>
-              <p>Лет</p>
+              <h3>День рождения:</h3>
+              <p id="birthday">Всегда молод</p>
             </div>
             <div class="social-description">
-            <a href="tel:03528 331 86 35"><img class="img2" src="https://i.ibb.co/pdZQxyJ/tel.png" alt="phone"></a>
-              <p>+375298162798</p>
+              <h3>Мобильный телефон:</h3>
+              <p id=phone>Под секретом</p>
             </div>
           </div>
         </div>
@@ -93,7 +111,8 @@
         </div>
   </footer>
 
-  <script src="scripts/requests.js"></script>
-    <script src="scripts/menu.js"></script>
+  <script src="../scripts/requests.js"></script>
+  <script src="../scripts/menu.js"></script>
+  <script src="../scripts/aboutMe.js"></script>
   </body>
   </html>

@@ -21,7 +21,7 @@ exports.add = function(req, res) {
 };
 
 exports.getproduct = function(req, res) {
-  Main.find({articul: req.query.articul}, function(err, product) {
+  Main.find({personID: req.query.personID}, function(err, product) {
     if (err)
       res.send(err);
     res.json(product);

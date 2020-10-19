@@ -29,7 +29,7 @@ function deleteInform() {
   document.getElementById('butExit').textContent = 'Вход';
   localStorage.removeItem('email');
   localStorage.removeItem('name');
-  localStorage.removeItem('personId');
+  localStorage.removeItem('personID');
   document.getElementById('autorization').textContent = 'Вход';
   document.getElementById('but-autorization').classList.remove('button-input-autorization');
 }

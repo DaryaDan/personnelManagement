@@ -1,7 +1,6 @@
 async function GetAll(url1) {
-  // для авторизации
+  // для авторизации, для персональной страницы
     const url = url1;
-    console.log(url);
     const res = await fetch(url, {
       method: 'GET',
           headers: {
@@ -14,8 +13,8 @@ async function GetAll(url1) {
 
 
 
-async function DelOne(personID) {
- const url = `http://localhost:3000/products/delete/?articul=${personID}`;
+async function DelOne(url1) {
+const url = url1;
  const res = await fetch(url, {
    method: 'DELETE',
    headers: {
@@ -27,8 +26,9 @@ async function DelOne(personID) {
 }
 
 
-async function GetOne(personID) {
-    const url = `http://localhost:3000/products/getproduct/?articul=${personID}`;
+async function GetOne(url1) {
+  // для получения пароля
+  const url = url1;
     const res = await fetch(url, {
       method: 'GET',
           headers: {
@@ -39,20 +39,10 @@ async function GetOne(personID) {
     return data;
   }
 
-async function UpdateOne(personID,personID_new,fullName,email,phone,img,birthday,position,roots,password,affairs) {
-    const url = `http://localhost:3000/products/update?articul=${personID}`;
-    const body = {
-      personID: `${personID_new}`,
-      fullName: `${fullName}`,
-      email: `${email}`,
-      phone: `${phone}`,
-      img: `${img}`,
-      birthday: `${birthday}`,
-      position: `${position}`,
-      affairs: `${affairs}`,
-      roots: `${roots}`,
-      password: `${password}`
-    };
+async function UpdateOne(url1,body1) {
+  //для редактирования персональной страницы
+  const url = url1;
+  const body = body1;
   const res = await fetch(url, {
       method: 'PUT',
       headers: {
