@@ -21,7 +21,7 @@ exports.add = function(req, res) {
 };
 
 exports.getproduct = function(req, res) {
-  Correspond.find({articul: req.query.articul}, function(err, product) {
+  Correspond.find({correspondID: req.query.correspondID}, function(err, product) {
     if (err)
       res.send(err);
     res.json(product);
@@ -29,8 +29,8 @@ exports.getproduct = function(req, res) {
 };
 
 exports.update = function(req, res) {
-  var articul = req.query.articul;
-  Correspond.findOneAndUpdate({articul: articul}, req.body, {new: true}, function(err, product) {
+  var correspondID = req.query.correspondID;
+  Correspond.findOneAndUpdate({correspondID: correspondID}, req.body, {new: true}, function(err, product) {
     if (err)
       res.send(err);
     res.json(product);
@@ -38,9 +38,9 @@ exports.update = function(req, res) {
 };
 
 exports.delete = function(req, res) {
-  var articul = req.query.articul;
+  var correspondID = req.query.correspondID;
   Correspond.remove({
-    articul: articul
+    correspondID: correspondID
   }, function(err, product) {
     if (err)
       res.send(err);

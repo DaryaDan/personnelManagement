@@ -29,8 +29,8 @@ exports.getproduct = function(req, res) {
 };
 
 exports.update = function(req, res) {
-  var articul = req.query.articul;
-  Main.findOneAndUpdate({articul: articul}, req.body, {new: true}, function(err, product) {
+  var personID = req.query.personID;
+  Main.findOneAndUpdate({personID: personID}, req.body, {new: true}, function(err, product) {
     if (err)
       res.send(err);
     res.json(product);
@@ -38,9 +38,9 @@ exports.update = function(req, res) {
 };
 
 exports.delete = function(req, res) {
-  var articul = req.query.articul;
+  var personID = req.query.personID;
   Main.remove({
-    articul: articul
+    personID: personID
   }, function(err, product) {
     if (err)
       res.send(err);

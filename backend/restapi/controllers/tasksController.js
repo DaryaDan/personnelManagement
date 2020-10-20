@@ -21,7 +21,7 @@ exports.add = function(req, res) {
 };
 
 exports.getproduct = function(req, res) {
-  Tasks.find({articul: req.query.articul}, function(err, product) {
+  Tasks.find({taskID: req.query.taskID}, function(err, product) {
     if (err)
       res.send(err);
     res.json(product);
@@ -29,8 +29,8 @@ exports.getproduct = function(req, res) {
 };
 
 exports.update = function(req, res) {
-  var articul = req.query.articul;
-  Tasks.findOneAndUpdate({articul: articul}, req.body, {new: true}, function(err, product) {
+  var taskID = req.query.taskID;
+  Tasks.findOneAndUpdate({taskID: taskID}, req.body, {new: true}, function(err, product) {
     if (err)
       res.send(err);
     res.json(product);
@@ -38,9 +38,9 @@ exports.update = function(req, res) {
 };
 
 exports.delete = function(req, res) {
-  var articul = req.query.articul;
+  var taskID = req.query.taskID;
   Tasks.remove({
-    articul: articul
+    taskID: taskID
   }, function(err, product) {
     if (err)
       res.send(err);

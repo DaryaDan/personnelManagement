@@ -21,7 +21,7 @@ exports.add = function(req, res) {
 };
 
 exports.getproduct = function(req, res) {
-  Description.find({articul: req.query.articul}, function(err, product) {
+  Description.find({descriptionID: req.query.descriptionID}, function(err, product) {
     if (err)
       res.send(err);
     res.json(product);
@@ -29,8 +29,8 @@ exports.getproduct = function(req, res) {
 };
 
 exports.update = function(req, res) {
-  var articul = req.query.articul;
-  Description.findOneAndUpdate({articul: articul}, req.body, {new: true}, function(err, product) {
+  var descriptionID = req.query.descriptionID;
+  Description.findOneAndUpdate({descriptionID: descriptionID}, req.body, {new: true}, function(err, product) {
     if (err)
       res.send(err);
     res.json(product);
@@ -38,9 +38,9 @@ exports.update = function(req, res) {
 };
 
 exports.delete = function(req, res) {
-  var articul = req.query.articul;
+  var descriptionID = req.query.descriptionID;
   Description.remove({
-    articul: articul
+    descriptionID: descriptionID
   }, function(err, product) {
     if (err)
       res.send(err);
