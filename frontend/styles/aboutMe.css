@@ -171,14 +171,21 @@ object-position: 10 10;
 
 /* Модальное окно */
 
+.indent {
+  padding-top: 12em;
+  padding-bottom: 2em;
+  text-align: center;
+  line-height: 1.61em;
+  font-weight: 300;
+  font-size: 1.2em;
+}
+
 .left {
   float: left;
-  padding-top: 12em;
 }
 
 .right {
   float: right;
-  padding-top: 12em;
 }
 
 @media (max-width: 35em) {
@@ -186,9 +193,6 @@ object-position: 10 10;
   .right {
     float: left;
     clear: left;
-  }
-  .right {
-  padding-top: 0;
   }
 }
 .form {

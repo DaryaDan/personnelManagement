@@ -11,7 +11,7 @@ let parentEl = document.getElementById("photo"),
      img = document.createElement("IMG");
 for(let i=0;i<count;i++){
 if(Number(localStorage.personID)===result[i].descriptionID){
-  if (result[i].birthday!==undefined){
+  if (result[i].birthday!==undefined&&result[i].birthday!==null){
     let k=result[i].birthday.slice(8, 10) + "." + result[i].birthday.slice(5, 7) + "." + result[i].birthday.slice(0, 4);
     document.getElementById('birthday').innerHTML = k;
   }
@@ -38,53 +38,52 @@ else {
 }
 
 
-console.log(localStorage.personID);
-let urlPass = `http://localhost:3000/main/getproduct/?personID=${localStorage.personID}`;
-console.log(urlPass);
-let dataGetPassword = GetOne(urlPass).then(result =>console.log(result));
-// let dataGetPassword = DelOne(urlPass).then(result =>console.log(result));
 
+let replase = document.getElementById('change');
+    replase.onclick = function editData() {
+    let urlPass = `http://localhost:3000/main/getproduct/?personID=${localStorage.personID}`;
+    let urlUpdate = `http://localhost:3000/description/getproduct/?descriptionID=${localStorage.personID}`;
+    let dataGetPassword = GetOne(urlPass).then(data =>(GetOne(urlUpdate).then(dat =>changeAll(data,dat))));
+  };
 
-let a = document.getElementById('change');
-    a.onclick = function editData() {
-    let urlMain=`http://localhost:3000/main`;
-    let urlDescription=`http://localhost:3000/description`;
+function changeAll(data,dat){
 
-    let fullName=document.getElementById('changeName').value;
-    let roots=false;
-    let email = document.getElementById('changeEmail').value;
+  let urlMain=`http://localhost:3000/main/update?personID=${localStorage.personID}`;
+  let urlDescription=`http://localhost:3000/description/update?descriptionID=${localStorage.personID}`;
+  let fullName=document.getElementById('changeName').value;
+  let roots=false;
+  let password=data[0].password;
+  let email=document.getElementById('changeEmail').value;
+  let phone=document.getElementById('changePhone').value;
+  let img=document.getElementById('changePhoto').value;
+  let position=document.getElementById('changePosition').value;
+  let birthday=document.getElementById('changeBirthday').value;
 
-    let password;
-    let urlPass = `http://localhost:3000/main/getproduct/?articul=${localStorage.personID}`;
-    let dataGetPassword = GetOne(urlPass).then(result =>{
-      let password=result.password;
-      console.log(result);
-      alert("aaaaaa");
-    });
-      console.log(password);
+  if (fullName.trim().length===0){fullName=localStorage.name;}
+  if (email.trim().length===0){email=localStorage.email;}
+  if (phone.trim().length===0){phone=dat[0].phone;}
+  if (img.trim().length===0){img=dat[0].img;}
+  if (position.trim().length===0){position=dat[0].position;}
+  if (birthday.trim().length===0){birthday=dat[0].birthday;}
 
-      let phone=document.getElementById('changePhone').value;
-      let img = document.getElementById('changePhoto').value;
-      let position=document.getElementById('changePosition').value;
-      let birthday = document.getElementById('changeBirthday').value;
-
-    // const bodyMain = {
-    //   personID: `${localStorage.personID}`,
-    //   fullName: `${fullName}`,
-    //   email: `${email}`,
-    //   roots: `${roots}`,
-    //   password: `${password}`
-    // };
-    // const bodyDescription = {
-    //   descriptionID: `${localStorage.personID}`,
-    //   phone: `${phone}`,
-    //   img: `${img}`,
-    //   birthday: `${birthday}`,
-    //   position: `${position}`
-    // };
-    // let dataAllMain = UpdateOne(urlMain,bodyMain).then(result =>console.log(result));
-    // let dataAllDescription = UpdateOne(urlDescription,bodyDescription).then(result =>console.log(result));
-    // localStorage.email=email;
-    // localStorage.name=fullName;
-
+    const bodyMain = {
+      personID: `${localStorage.personID}`,
+      fullName: `${fullName}`,
+      email: `${email}`,
+      roots: `${roots}`,
+      password: `${password}`
+    };
+    const bodyDescription = {
+      descriptionID: `${localStorage.personID}`,
+      phone: `${phone}`,
+      img: `${img}`,
+      birthday: `${birthday}`,
+      position: `${position}`
+    };
+    let dataAllMain = UpdateOne(urlMain,bodyMain).then(localStorage.email=email).then(localStorage.name=fullName)
+    .then(UpdateOne(urlDescription,bodyDescription).then(setTimeout(plan, 1000)));
   }
+
+  function plan() {
+  document.location.href = "aboutMe.html"
+}

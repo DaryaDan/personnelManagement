@@ -1,5 +1,5 @@
-async function GetAll(url1) {
   // для авторизации, для персональной страницы
+async function GetAll(url1) {
     const url = url1;
     const res = await fetch(url, {
       method: 'GET',
@@ -26,21 +26,21 @@ const url = url1;
 }
 
 
-async function GetOne(url1) {
   // для получения пароля
+  async function GetOne(url1) {
   const url = url1;
-    const res = await fetch(url, {
-      method: 'GET',
-          headers: {
-            'Content-Type': 'application/json',
-          }
-    })
-    const data = await res.json();
-    return data;
-  }
+  const res = await fetch(url, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  });
+  const data = res.json();
+  return data;
+}
 
-async function UpdateOne(url1,body1) {
   //для редактирования персональной страницы
+async function UpdateOne(url1,body1) {
   const url = url1;
   const body = body1;
   const res = await fetch(url, {
@@ -54,8 +54,8 @@ async function UpdateOne(url1,body1) {
     return data;
   }
 
-async function AddOne(url1,body1) {
 //для регистрации
+async function AddOne(url1,body1) {
 const url = url1;
 const body = body1;
 const res = await fetch(url, {

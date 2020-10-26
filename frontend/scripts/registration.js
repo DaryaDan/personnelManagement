@@ -49,7 +49,7 @@ if(fullName.length!==0&&email.length!==0&&password.length!==0&&code===code1){
 
 
 
-var log = document.getElementById('login');
+let log = document.getElementById('login');
     log.onclick = function getData() {
     let url=`http://localhost:3000/main`;
     let dataAll = GetAll(url).then(result =>comparison(result));
