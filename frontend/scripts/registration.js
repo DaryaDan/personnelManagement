@@ -66,7 +66,7 @@ function comparison(result){
       localStorage.email=email;
       localStorage.name=result[i].fullName;
       localStorage.personID=result[i].personID;
-      if (result[i].roots==="true"){
+      if (result[i].roots===true){
       document.location.href = "mainAdmin.html";}
       else {document.location.href = "mainUser.html";}
     }}
