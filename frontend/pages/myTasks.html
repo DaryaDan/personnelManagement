@@ -4,8 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="../styles/style.css" rel="stylesheet">
+<link href="../styles/myTasks.css" rel="stylesheet">
 <title>Главная пользователя</title>
 <link rel="icon" href="#" type="image/x-icon">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 </head>
 <body>
     <header class="header">
@@ -16,7 +18,7 @@
 
     <nav id="nav" class="nav">
         <ul class="menu">
-          <li><a href="aboutMe.html">Личный кабинет</a></li>
+          <li><a href="#">Главная</a></li>
           <li><a href="#">Мои коллеги</a></li>
             <li class="p_menu"><a class = "link">Мои задачи</a>
                 <ul class="v_menu">
@@ -35,7 +37,7 @@
       <h3 class="dropdown">RS Lang</h3>
       <span class = "contener">
         <div class="dropdown">
-        <a href="aboutMe.html" class="dropbtn">Личный кабинет</a>
+        <a href="#" class="dropbtn">Главная</a>
         </div>
     <div class="dropdown">
   <a href="#" class="dropbtn">Мои коллеги</a>
@@ -58,6 +60,12 @@
   </div>
   </header>
 
+  <div class="demo-wrapper html5-progress-bar">
+    <div id="test-with-points">
+      <div id="test-caption">Задачи</div>
+      <div id="test-question">Какие выполнены</div><progress id="progressbar" value="5" max="7"></progress>
+</div></div>
+
 
   <footer class="footer-distributed">
           <div class="footer-left">
@@ -66,6 +74,7 @@
   </footer>
 
   <script src="../scripts/requests.js"></script>
-    <script src="../scripts/menu.js"></script>
+  <script src="../scripts/menu.js"></script>
+  <script src="../scripts/myTasks.js"></script>
   </body>
   </html>
