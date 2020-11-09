@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="../styles/style.css" rel="stylesheet">
+<link href="../styles/newTask.css" rel="stylesheet">
+<title>Input</title>
+<link rel="icon" href="#" type="image/x-icon">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+</head>
+<body>
+<form onsubmit="return false;">
+
+  <header>
+    <h2>Добавьте новую задачу</h2>
+    <!-- <div>This form breaks at 600px and goes from a left-label form to a top-label form. At above 1200px, the labels align right.</div> -->
+  </header>
+  <div>
+    <label class="desc" id="title106" for="Field0">
+    Выберите сотрудника
+    </label>
+    <div>
+    <select id="Field0" name="Field0" class="field select medium input" tabindex="11" required>
+       <option selected disabled hidden style='display: none' value=''>Сотрудники</option>
+    </select>
+    </div>
+  </div>
+
+  <div>
+    <label class="desc" id="title1" for="Field1">Название задачи</label>
+    <div>
+      <input id="Field1" name="Field1" type="text" class="field text fn input" value="" size="8" tabindex="1" required>
+    </div>
+  </div>
+
+  <div>
+    <label class="desc" id="title2" for="Field2">Описание</label>
+    <div>
+      <textarea id="Field2" class="input" name="Field2" spellcheck="true" rows="10" cols="50" tabindex="4" required></textarea>
+    </div>
+  </div>
+
+  <div>
+    <label class="desc" id="title3" for="Field3">
+      Срок
+    </label>
+    <div>
+      <input id="Field3" class="input" name="Field3" type="date" spellcheck="false" value="" required>
+   </div>
+  </div>
+
+  <div>
+    <label class="desc" id="title4" for="Field4">Подзадачи</label>
+    <div>
+      <input id="Field4" name="Field4" type="text" class="field text fn input Field4" value="" size="8" tabindex="1">
+    </div>
+  </div>
+
+  <div>
+<div>
+  <input id="saveForm" name="saveForm" type="submit" value="Создать">
+   <input type="reset" value="Очистить"/>
+    <span class="stage1"></span>
+    </div>
+</div>
+
+</form>
+
+
+
+<script src="../scripts/requests.js"></script>
+  <script src="../scripts/newTask.js"></script>
+</body>
+</html>
