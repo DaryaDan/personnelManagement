@@ -39,12 +39,25 @@ manID=result[i].personID;
     let term=document.getElementById('Field3').value;
 
     let subtasks=[];
-    document.querySelectorAll('.Field4').forEach(element => subtasks.push(element.value));
+    let change=[];
+    document.querySelectorAll('.Field4').forEach(element => {
+      change.push(element.value);
+      change.push("false");
+      subtasks.push(change);
+      change = [];
+    });
     var filtered = subtasks.filter(function (el) {
-  return el != "";
+  return el[0] != "";
 });
 
-    let type="новая";
+let radios = document.getElementsByName('typeT');
+let type;
+for (let i = 0; i < 3; i++) {
+    if (radios[i].checked) {
+        type=radios[i].value;
+    }
+}
+
 if(manID.length!==0&&taskName.length!==0&&description.length!==0&&term.length!==0){
     const body = {
       manID: `${manID}`,
