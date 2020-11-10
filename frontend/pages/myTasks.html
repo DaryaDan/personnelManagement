@@ -7,7 +7,6 @@
 <link href="../styles/myTasks.css" rel="stylesheet">
 <title>Главная пользователя</title>
 <link rel="icon" href="#" type="image/x-icon">
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 </head>
 <body>
     <header class="header">
@@ -60,10 +59,14 @@
   </div>
   </header>
 
-  <div class="demo-wrapper html5-progress-bar">
+  <div class="html5-progress-bar">
     <div id="test-with-points">
       <div id="test-caption">Задачи</div>
-      <div id="test-question">Какие выполнены</div><progress id="progressbar" value="5" max="7"></progress>
+      <div id="allTasks">
+        <div><h3>Новые</h3><div id="tasksNew"></div></div>
+      <div><h3>В процессе</h3><div id="tasksInProcess"></div></div>
+      <div><h3>Завершенные</h3><div id="tasksComplete"></div></div>
+    </div>
 </div></div>
 
 
