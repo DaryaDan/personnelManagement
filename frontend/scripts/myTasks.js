@@ -21,7 +21,6 @@ else {subLengthChange=subLength;}
 
 let compliteLength=0;
 for(let k=0;k<subLength;k++){
-  console.log(result[i].subtasks[k][1]);
 if(result[i].subtasks[k][1]==='true'){
   compliteLength++;
 }
@@ -32,30 +31,46 @@ percent+=((Number(compliteLength)/subLengthChange)*100).toFixed(2);
 percent+="%"
 if(Number(compliteLength)===0){
 strNew += `
-<div>
+<div><a href="javascript:openModal()">
 <div>${result[i].taskName}${percent}
 <progress id="progressbar" value=${compliteLength} max=${subLength}></progress>
-    </div>`
+  </a></div>`
   }
 
   else if(Number(compliteLength)<subLengthChange){
   strInProcess += `
-  <div>
+<div><a href="javascript:openModal()">
   <div>${result[i].taskName}${percent}
   <progress id="progressbar" value=${compliteLength} max=${subLength}></progress>
-      </div>`
+    </a></div>`
     }
 
     else if(Number(compliteLength)===subLengthChange){
     strComplete += `
-    <div>
+<div><a href="javascript:openModal()">
     <div>${result[i].taskName}${percent}
     <progress id="progressbar" value=${compliteLength} max=${subLength}></progress>
-        </div>`
+  </a></div>`
       }
 
 }}
 taskNew.innerHTML = strNew;
 taskInProcess.innerHTML = strInProcess;
 taskComplete.innerHTML = strComplete;
+}
+
+/* всплывающее окно */
+var isInit = false;
+function openModal(){
+  var elModal  = document.querySelector('#Modal');
+  if(isInit==false) {
+   isInit = true;
+   document.querySelector('.prefix-close').addEventListener('click',
+        function(event) {
+           event.preventDefault();
+           elModal.classList.toggle('active');
+        }
+    );
+  }
+  elModal.classList.toggle('active');
 }
