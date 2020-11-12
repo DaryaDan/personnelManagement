@@ -57,8 +57,7 @@ for (let i = 0; i < 3; i++) {
         type=radios[i].value;
     }
 }
-
-if(manID.length!==0&&taskName.length!==0&&description.length!==0&&term.length!==0){
+if(manID.length!==0&&taskName.length!==0&&description.length!==0&&term.length!==0&&filtered.length!==0){
     const body = {
       manID: `${manID}`,
       taskID: `${taskID}`,

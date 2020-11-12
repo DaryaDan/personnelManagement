@@ -15,9 +15,6 @@ for(let i=0;i<length;i++){
   if(result[i].manID===Number(localStorage.personID)){
 
 let subLength=result[i].subtasks.length;
-let subLengthChange;
-if(subLength===0){subLengthChange=1;}
-else {subLengthChange=subLength;}
 
 let compliteLength=0;
 for(let k=0;k<subLength;k++){
@@ -26,7 +23,7 @@ if(result[i].subtasks[k][1]==='true'){
 }
 }
 let percent=" ";
-percent+=((Number(compliteLength)/subLengthChange)*100).toFixed(2);
+percent+=((Number(compliteLength)/subLength)*100).toFixed(2);
 percent+="%"
 if(Number(compliteLength)===0){
 strNew += `
@@ -36,7 +33,7 @@ strNew += `
   </a></div>`
   }
 
-  else if(Number(compliteLength)<subLengthChange){
+  else if(Number(compliteLength)<subLength){
   strInProcess += `
   <div id="${result[i].taskID}"><a id="${result[i].taskID}">
   <div id="${result[i].taskID}">${result[i].taskName}${percent}
@@ -44,7 +41,7 @@ strNew += `
     </a></div>`
     }
 
-    else if(Number(compliteLength)===subLengthChange){
+    else if(Number(compliteLength)===subLength){
     strComplete += `
     <div id="${result[i].taskID}"><a id="${result[i].taskID}">
     <div id="${result[i].taskID}">${result[i].taskName}${percent}
@@ -117,7 +114,7 @@ addArr += `<li><div id=${u} class="resSub cross">${result.subtasks[u][0]}</div><
 else {
   addArr += `<li><div id=${u} class="resSub">${result.subtasks[u][0]}</div></li>`
 }
-  }
+}
 
   taskNew.innerHTML = `
   <div>
