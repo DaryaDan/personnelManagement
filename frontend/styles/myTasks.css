@@ -80,6 +80,10 @@ progress::-moz-progress-bar {
 }
 
 /* всплывающее окно */
+#Modal{
+display: none;
+}
+
 h2 {
   font-size: 45px;
   text-align: center;
@@ -91,10 +95,8 @@ h2 {
 
 .prefix-tabs{
   color: #666666;
-}
-
-.prefix-tabs, .prefix-close {
   font-family: 'Montserrat', sans-serif;
+  text-align: left;
 }
 
 .prefix-Dialog {
@@ -129,7 +131,7 @@ h2 {
   pointer-events: auto;
 }
 
- .prefix-close {
+ /* .prefix-close {
   background: #9AD3DE;
   border: 0;
   border-radius: 4px;
@@ -147,4 +149,15 @@ h2 {
 
 .close{
   margin-top: 30px;
+} */
+
+.resSub{
+  display:inline-block;
+  margin-left: 10px;
+  font-size: 20px;
+}
+
+.cross{
+  text-decoration: line-through;
+  text-decoration-color: red;
 }
