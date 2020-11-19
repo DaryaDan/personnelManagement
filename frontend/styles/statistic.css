@@ -1,5 +1,54 @@
 .chart{
   position: relative;
   padding-top: 5em;
-  font-size: 1em;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.pie{
+  position: relative;
+  padding-top: 5em;
+  width: 430px;
+  /* margin: 0 auto; */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-gap: 20px;
+  padding-bottom: 20px;
+  margin: 0 calc(50% - 450px);
+}
+
+#pieChart1,#pieChart2 {
+  display: flex;
+  position: relative;
+}
+
+@media (max-width: 880px) {
+  .pie{
+    padding-top: 2em;
+    width: 300px;
+    margin: 0 calc(50% - 320px);
+  }
+}
+
+@media (max-width: 620px) {
+  #pieChart1,#pieChart2 {
+    margin-top: 1.5em;
+  }
+  .pie{
+    padding-top: 0;
+    width: 430px;
+    display: block;
+    margin: 0 calc(50% - 215px);
+  }
+}
+
+@media (max-width: 430px) {
+  #pieChart1,#pieChart2 {
+    margin-top: 1em;
+  }
+  .pie{
+    width: 320px;
+    margin: 0 calc(50% - 160px);
+  }
 }
