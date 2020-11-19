@@ -4,8 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="../styles/style.css" rel="stylesheet">
+<link href="../styles/calendar.css" rel="stylesheet">
 <title>Главная пользователя</title>
 <link rel="icon" href="#" type="image/x-icon">
+<!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script> -->
+<link href='../node_modules/fullcalendar/main.css' rel='stylesheet' />
+<script src='../node_modules/fullcalendar/main.js'></script>
+<script src='../node_modules/fullcalendar/locales/ru.js'></script>
 </head>
 <body>
     <header class="header">
@@ -16,13 +21,13 @@
 
     <nav id="nav" class="nav">
         <ul class="menu">
-          <li><a href="aboutMe.html">Личный кабинет</a></li>
+          <li><a href="#">Главная</a></li>
           <li><a href="#">Мои коллеги</a></li>
             <li class="p_menu"><a class = "link">Мои задачи</a>
                 <ul class="v_menu">
-                  <li><a href="myTasks.html">Список</a></li>
-                  <li><a href="calendar.html">Календарь</a></li>
-                  <li><a href="statistic.html">Статистика</a></li>
+                  <li><a href="myTasks.html">Новые</a></li>
+                  <li><a href="#">В процессе</a></li>
+                  <li><a href="#">Завершенные</a></li>
                 </ul>
             </li>
             <li><a href="#">О компании</a></li>
@@ -35,7 +40,7 @@
       <h3 class="dropdown">RS Lang</h3>
       <span class = "contener">
         <div class="dropdown">
-        <a href="aboutMe.html" class="dropbtn">Личный кабинет</a>
+        <a href="#" class="dropbtn">Главная</a>
         </div>
     <div class="dropdown">
   <a href="#" class="dropbtn">Мои коллеги</a>
@@ -43,9 +48,9 @@
     <div class="dropdown">
       <button class="dropbtn">Мои задачи</button>
       <div class="dropdown-content">
-        <a href="myTasks.html">Список</a>
-        <a href="calendar.html">Календарь</a>
-        <a href="statistic.html">Статистика</a>
+        <a href="myTasks.html">Новые</a>
+        <a href="#">В процессе</a>
+        <a href="#">Завершенные</a>
       </div>
     </div>
     <div class="dropdown">
@@ -58,6 +63,7 @@
   </div>
   </header>
 
+<div id='calendar'></div>
 
   <footer class="footer-distributed">
           <div class="footer-left">
@@ -66,6 +72,7 @@
   </footer>
 
   <script src="../scripts/requests.js"></script>
-    <script src="../scripts/menu.js"></script>
+  <script src="../scripts/menu.js"></script>
+  <script src="../scripts/calendar.js"></script>
   </body>
   </html>
