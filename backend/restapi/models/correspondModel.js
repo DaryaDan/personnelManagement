@@ -10,7 +10,9 @@ var Correspond = new Schema({
 
   fullName: { type: String, Required:  'Product name cannot be left blank.' },
 
-  mail: { type: String, Required:  'Product name cannot be left blank.' }
+  mail: { type: String, Required:  'Product name cannot be left blank.' },
+
+  time: { type: String, Required:  'Product name cannot be left blank.' }
 
 });
 
