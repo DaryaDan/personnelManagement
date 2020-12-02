@@ -6,6 +6,7 @@ var express = require('express'),
   Description  = require('./restapi/models/descriptionModel'),
   Tasks  = require('./restapi/models/tasksModel'),
   Correspond  = require('./restapi/models/correspondModel'),
+  News  = require('./restapi/models/newsModel'),
   bodyParser = require('body-parser');
   cors = require('cors');
 
@@ -22,10 +23,12 @@ var routes1 = require('./restapi/routes/mainRoutes');
 var routes2 = require('./restapi/routes/descriptionRoutes');
 var routes3 = require('./restapi/routes/tasksRoutes');
 var routes4 = require('./restapi/routes/correspondRoutes');
+var routes5 = require('./restapi/routes/newsRoutes');
 routes1(app);
 routes2(app);
 routes3(app);
 routes4(app);
+routes5(app);
 
 app.use(function(req, res) {
   res.status(404).send({url: req.originalUrl + ' not found'})
