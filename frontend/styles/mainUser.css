@@ -1,0 +1,62 @@
+#main{
+    position: relative;
+    padding-top: 3em;
+    font-size: 20px;
+
+    width: 70%;
+    margin: 0 auto;
+}
+
+.card {
+  margin: 35px auto 15px;
+  text-decoration: none;
+  color: #444;
+  position: relative;
+  top: 0;
+  transition: all .1s ease-in;
+}
+
+.news {
+  display: block;
+  height: 108px;
+  padding: 5px;
+  margin: 5px 0;
+  outline: none;
+  overflow: hidden;
+  color: black
+}
+button {
+  outline: none;
+color: red;
+background-color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+button:focus{
+  display: inherit;
+}
+button:focus ~ .news {
+  height: auto;
+}
+
+
+.type{
+color: white;
+padding: 8px;
+font-family: Arial;
+}
+
+.authorName{
+  color: #605757;
+  padding: 8px;
+  font-family: Arial;
+  font-style: italic;
+}
+
+.data{
+  color: #605757;
+  padding: 8px;
+  font-family: Arial;
+    font-style: italic;
+}

@@ -1,0 +1,111 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="../styles/style.css" rel="stylesheet">
+<link href="../styles/news.css" rel="stylesheet">
+<title>Добавить новость</title>
+<link rel="icon" href="#" type="image/x-icon">
+</head>
+<body>
+    <header class="header">
+
+    <div class="nav-toggle">
+    	<div class="nav-toggle-bar"></div>
+    </div>
+
+    <nav id="nav" class="nav">
+        <ul class="menu">
+          <li><a href="#">Главная</a></li>
+          <li><a href="#">Мои коллеги</a></li>
+            <li class="p_menu"><a class = "link">Мои задачи</a>
+                <ul class="v_menu">
+                  <li><a href="myTasks.html">Новые</a></li>
+                  <li><a href="#">В процессе</a></li>
+                  <li><a href="#">Завершенные</a></li>
+                </ul>
+            </li>
+            <li><a href="#">О компании</a></li>
+            <li><a href="registration.html" id="butExit">Вход</a></li>
+              </ul>
+      </nav>
+
+    <div class="line">
+      <p class="dropdown"><img src="https://www.meme-arsenal.com/memes/93da8ee2c78577c10aa5dbe102b7ae65.jpg" alt="Логотип"></p>
+      <h3 class="dropdown">RS Lang</h3>
+      <span class = "contener">
+        <div class="dropdown">
+        <a href="#" class="dropbtn">Главная</a>
+        </div>
+    <div class="dropdown">
+  <a href="#" class="dropbtn">Мои коллеги</a>
+    </div>
+    <div class="dropdown">
+      <button class="dropbtn">Мои задачи</button>
+      <div class="dropdown-content">
+        <a href="myTasks.html">Новые</a>
+        <a href="#">В процессе</a>
+        <a href="#">Завершенные</a>
+      </div>
+    </div>
+    <div class="dropdown">
+    <a href="#" class="dropbtn">О компании</a>
+    </div>
+    <div class="dropdown">
+  <button class="button-input" id = "but-autorization" data-hover="Выход" href="index.html"><a id = "autorization" href="registration.html">Вход</a></button>
+    </div>
+  </span>
+  </div>
+  </header>
+
+  <form onsubmit="return false;">
+
+    <header>
+      <h2>Добавьте новость</h2>
+      </header>
+    <div>
+      <label class="desc" id="title106" for="Field0">
+      Выберите категорию новости
+      </label>
+      <div>
+      <select id="Field1" name="Field1" class="field select medium input" tabindex="11" required>
+         <option selected disabled hidden value=' '>Категории</option>
+         <option value='Сотрудники'>Сотрудники</option>
+         <option value='Культура‎ и спорт'>Культура‎ и спорт</option>
+         <option value='Экономика‎'>Экономика‎</option>
+         <option value='Наука и технологии'>Наука и технологии</option>
+         <option value='Общество'>Общество</option>
+      </select>
+      </div>
+    </div>
+
+    <div>
+      <label class="desc" id="title2" for="Field2">Новость</label>
+      <div>
+        <textarea id="Field2" class="input" name="Field2" spellcheck="true" rows="10" cols="50" tabindex="4" required></textarea>
+      </div>
+    </div>
+
+    <div>
+  <div>
+    <input id="saveForm" name="saveForm" type="submit" value="Создать" onclick="newNews();">
+     <input type="reset" value="Очистить"/>
+      <span class="stage1"></span>
+      </div>
+  </div>
+
+  </form>
+
+
+  <footer class="footer-distributed">
+          <div class="footer-left">
+          <p class = "School">RS School 2020q1</p>
+        </div>
+  </footer>
+
+  <script src="../scripts/requests.js"></script>
+  <script src="../scripts/menu.js"></script>
+  <script src="../scripts/news.js"></script>
+  </body>
+  </html>

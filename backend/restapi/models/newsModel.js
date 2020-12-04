@@ -14,7 +14,7 @@ var News = new Schema({
 
   data: { type: String, Required:  'Product name cannot be left blank.' },
 
-  type: { type: String,     Required:  'Product price cannot be left blank.'} //Культура‎, Наука и технологии‎, Общество, Дни рождения‎, Политика, Происшествия‎, Рейтинги, Спорт‎,Экономика‎, Иное
+  type: { type: String,     Required:  'Product price cannot be left blank.'} 
 
 });
 
