@@ -6,9 +6,9 @@ var Schema = mongoose.Schema;
 
 var Tasks = new Schema({
 
-  manID: { type: Number, Required:  'Product name cannot be left blank.' },
-
   taskID: { type: Number, Required:  'Product name cannot be left blank.' },
+
+  manID: { type: Number, Required:  'Product name cannot be left blank.' },
 
   taskName: { type: String ,    Required:  'Product category cannot be left blank'},
 

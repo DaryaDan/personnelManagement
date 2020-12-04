@@ -1,6 +1,40 @@
+.tooltip {
+  font-size: 2em;
+    position: relative;
+    display: inline-block;
+    margin: 10px 0 0 10px;
+  /* float: right; */
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #e9f5f7;
+    color: black;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+}
+
+.tooltiptext {
+  font-size: 0.5em;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+
+
 .html5-progress-bar {
   position: relative;
-  padding-top: 6em;
+  padding-top: 4em;
 }
 
 /* All good till now. Now we'll style the background */
