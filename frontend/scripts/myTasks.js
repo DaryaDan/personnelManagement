@@ -1,3 +1,4 @@
+let text="";
 (function allTasks() {
 let urlMain=`http://localhost:3000/tasks`;
 let data = GetAll(urlMain).then(result =>myAlltasks(result));
@@ -14,7 +15,25 @@ function myAlltasks(result){
 for(let i=0;i<length;i++){
   if(result[i].manID===Number(localStorage.personID)){
 
-let subLength=result[i].subtasks.length;
+    let subLength=result[i].subtasks.length;
+    let sub="";
+    for(let t=0;t<subLength;t++){
+  sub+=result[i].subtasks[t][0];
+      if (result[i].subtasks[t][1]==="true"){
+        sub+=`(+)`;
+      }
+      else {
+        sub+=`(-)`;
+      }
+  sub+=`; `;
+    }
+    text+=`
+    --------${result[i].taskName}--------
+    Описание: ${result[i].description}
+    Подзадачи: ${sub}
+    Срок выполнения до ${result[i].term}
+    Тип сложности: ${result[i].type}
+    `;
 
 let compliteLength=0;
 for(let k=0;k<subLength;k++){
@@ -163,3 +182,26 @@ function updateTask(result) {
   };
 let dataAllMain = UpdateOne(urlMain,body);
 }
+
+
+////////Сохранение
+function download(filename, text) {
+    let element = document.createElement('a');
+    element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+    element.setAttribute('download', filename);
+    element.style.display = 'none';
+    document.body.appendChild(element);
+
+    element.click();
+
+    document.body.removeChild(element);
+}
+
+document.getElementById("tooltip").addEventListener("click", function(){
+
+let now = new Date().toLocaleString();
+
+    let filename = `задачи на ${now}.txt`;
+
+    download(filename, text);
+}, false);
