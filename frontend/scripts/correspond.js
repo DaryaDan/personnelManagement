@@ -89,7 +89,7 @@ const body = {
   mail: `${text}`,
   time: `${now}`
 };
-let dataAll = AddOne(urlMain,body).then(result =>console.log(result));
+let dataAll = AddOne(urlMain,body);
 }
 
 // Load the Emojies

@@ -56,10 +56,9 @@ width: 100%;
   border-right: 1px solid #eee;
   border-bottom: 1px solid #eee;
 }
-input[type=text],
+#Field4,
 input[type=date],
-input[type=radio],
-textarea{
+input[type=radio]{
   width: 50%;
 }
 input[type=text]:focus,
