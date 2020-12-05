@@ -4,8 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="../styles/style.css" rel="stylesheet">
-<title>Главная админа</title>
+<link href="../styles/statisticAdmin.css" rel="stylesheet">
+<title>Статистика компании</title>
 <link rel="icon" href="#" type="image/x-icon">
+<script src="../node_modules/chart.js/dist/Chart.js"></script>
 </head>
 <body>
     <header class="header">
@@ -26,7 +28,7 @@
               </ul>
           </li>
           <li><a href="#">Переписка</a></li>
-          <li><a href="statisticAdmin.html">Статистика</a></li>
+          <li><a href="#">Статистика</a></li>
             <li><a href="#">О компании</a></li>
             <li><a href="registration.html" id="butExit">Вход</a></li>
               </ul>
@@ -54,7 +56,7 @@
     <a href="#" class="dropbtn">Переписка</a>
     </div>
     <div class="dropdown">
-    <a href="statisticAdmin.html" class="dropbtn">Статистика</a>
+    <a href="#" class="dropbtn">Статистика</a>
     </div>
     <div class="dropdown">
     <a href="#" class="dropbtn">О компании</a>
@@ -66,6 +68,16 @@
   </div>
   </header>
 
+  <div class="bar">
+  <canvas id="line-bar"></canvas>
+  </div>
+
+<div id="statistic">Статистика</div>
+  <div id="tasks"> </div>
+  <div id="hard"> </div>
+  <div id="easy"> </div>
+  <div id="people"> </div>
+  <div id="percent"> </div>
 
   <footer class="footer-distributed">
           <div class="footer-left">
@@ -74,6 +86,7 @@
   </footer>
 
   <script src="../scripts/requests.js"></script>
-    <script src="../scripts/menu.js"></script>
+  <script src="../scripts/menu.js"></script>
+  <script src="../scripts/statisticAdmin.js"></script>
   </body>
   </html>

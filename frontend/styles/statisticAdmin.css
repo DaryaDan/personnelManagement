@@ -1,0 +1,19 @@
+.bar{
+  position: relative;
+  padding-top: 5em;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+#hard, #easy, #people, #percent, #tasks{
+  padding: 0 22vw 20px;
+  font-size: 20px;
+}
+
+#statistic{
+  text-align: center;
+  margin: 20px auto;
+  font-size: 25px;
+  font-weight: bold;
+  color: #00A591;
+}
