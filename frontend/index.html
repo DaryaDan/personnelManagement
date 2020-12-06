@@ -4,8 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="styles/style.css" rel="stylesheet">
-<title>Главная</title>
-<link rel="icon" href="#" type="image/x-icon">
+<link href="styles/main.css" rel="stylesheet">
+<title>О компании</title>
+<link rel="icon" href="https://i.ibb.co/55g6YBc/image.png" type="image/x-icon">
 </head>
 <body>
     <header class="header">
@@ -16,29 +17,69 @@
 
     <nav id="nav" class="nav">
         <ul class="menu">
-          <li><a href="#">О компании</a></li>
+          <li><a href="pages/newNews.html">Новости</a></li>
+          <li><a href="pages/newColleagues.html">Сотрудники</a></li>
             <li><a href="pages/registration.html" id="butExit">Вход</a></li>
-              </ul>
-      </nav>
+        </ul>
+    </nav>
 
     <div class="line">
-      <p class="dropdown"><img src="https://www.meme-arsenal.com/memes/93da8ee2c78577c10aa5dbe102b7ae65.jpg" alt="Логотип"></p>
-      <h3 class="dropdown">RS Lang</h3>
+      <p class="dropdown"><img src="https://i.ibb.co/fVJ5mmk/image.png" alt="Логотип" border="0" ></p>
+      <h3 class="dropdown">Моя компания</h3>
       <span class = "contener">
+        <div class="dropdown">
+        <a href="pages/newNews.html" class="dropbtn">Новости</a>
+        </div>
     <div class="dropdown">
-  <a href="#" class="dropbtn">О компании</a>
+  <a href="pages/newColleagues.html" class="dropbtn">Сотрудники</a>
     </div>
     <div class="dropdown">
-      <button class="button-input" id = "but-autorization" data-hover="Выход" href="index.html"><a id = "autorization" href="pages/registration.html">Вход</a></button>
+  <button class="button-input" id = "but-autorization" data-hover="Выход" href="index.html"><a id = "autorization" href="pages/registration.html">Вход</a></button>
     </div>
   </span>
   </div>
   </header>
 
+  <main>
+  <section  id="section1">
+        <img src="https://i.ibb.co/whWdWpJ/image.png" alt="Логотип">
+        <div class="text">
+    <p>Присоединяйтесь к нашей дружной компании</p>
+  </div>
+    </section>
+
+    <section id="section2" class="new-word">
+  <div class="dividing-line">
+    <div class="dividing-line-background"></div>
+    <div><h2 class = "headline">Управляющие!</h2>
+      <div class="dividing-line-text">Следите за работой своих сотрудников. Общайтесь в режиме онлайн. Уведомляйте о новых задачах и новостях быстро и удобно.</div>
+    </div>
+  </div>
+
+<div class="font">
+  <div class="dividing-line">
+    <div><h2 class = "headline">Сотрудники!</h2>
+      <div class="dividing-line-text">Отслеживайте свой прогресс онлайн. Смотрите общую и свою статистики компании. Общайтесь с коллегами. Первыми изнавайте все новости.</div>
+    </div>
+    <div class="dividing-line-background1"></div>
+  </div>
+    </div>
+
+  <div class="dividing-line">
+    <div class="dividing-line-background2"></div>
+    <div><h2 class = "headline">Посетители!</h2>
+      <div class="dividing-line-text">Посмотрите, как разрабатывалось приложение.</div>
+  <a class="dividing-line-opisanie" href="https://github.com/DaryaDan/personnelManagement" target="_blank">GitHub</a>
+    </div>
+  </div>
+
+  </section>
+  </main>
+
   <footer class="footer-distributed">
           <div class="footer-left">
-          <p class = "School">RS School 2020q1</p>
-      </div>
+          <a class = "School" href="https://github.com/DaryaDan/personnelManagement" target="_blank">Ссылка на GitHub</a>
+        </div>
   </footer>
 
   <script src="scripts/requests.js"></script>
