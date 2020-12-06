@@ -36,13 +36,14 @@ background-color: white;
     border: none;
     font-size: 16px;
     cursor: pointer;
+    display: inherit;
 }
-button:focus{
+/* button:focus{
   display: inherit;
-}
-button:focus ~ .news {
+} */
+/* button:focus ~ .news {
   height: auto;
-}
+} */
 
 
 .type{

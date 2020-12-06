@@ -32,13 +32,24 @@ color="#BC70A4";
 str += `
 <div class="card">
 <div class="type" style="background-color: ${color};">${type}</div>
-<button>Читать полностью</button>
 <div class="news" tabindex="0">${news}</div>
+<button>Читать полностью</button>
 <span class="authorName">Автор: ${authorName}</span>
 <span class="data">${data}</span>
     </div>`
-
-
 }
 staff.innerHTML = str;
+
+//читать далее
+const button = document.getElementById('main');
+button.addEventListener('click', (event) => {
+button.querySelectorAll('.news').forEach(el =>{
+  el.style = "height: 108px;";
+});
+button.querySelectorAll('button').forEach(el =>{
+  el.style = "display: block;";
+});
+event.path[1].childNodes[3].style = "height: auto;";
+event.path[1].childNodes[5].style= "display: none;";
+});
 }
