@@ -94,7 +94,6 @@ background: #fbfcfe;
 }
 
 .dropdown img {
-  width: 3rem;
   height: 3rem;
   margin: 2rem 0.6rem -10px 3rem;
 }
@@ -321,14 +320,10 @@ ul{
     transform: scaleX(-1);
 }
 
-p {
+.School, p {
   display: inline-block;
   vertical-align: top;
   margin: 0;
-}
-
-* {
-  box-sizing: border-box;
 }
 
 footer {
@@ -342,7 +337,7 @@ footer {
 }
 
 
-.footer-distributed .footer-left p {
+.footer-distributed .footer-left .School{
   color: black;
   font-size: 20px;
   position: relative;
@@ -373,7 +368,6 @@ footer {
   .nav {width: 200px;}
 
   .dropdown img {
-    width: 2rem;
     height: 2rem;
     margin: 1.6rem 0.6rem -10px 3rem;
   }

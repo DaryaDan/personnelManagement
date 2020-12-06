@@ -106,12 +106,6 @@ if(Number(event.target.id)===result[i].taskID){
 }
     }
   });
-//   span = document.getElementsByClassName("prefix-close");
-// console.log(span);
-// span.onclick = function() {
-//   console.log("444");
-//    modal.style.display = "none";
-// }
 }
 
 window.onclick = function(event) {
@@ -142,7 +136,7 @@ else {
 ${addArr}
 </ol>
   </div>
-  </div>` //<div class="close">	<a class="prefix-close" title="Закрыть" href="#close">Закрыть</a></div> перед последним div
+  </div>` 
 
   const round = document.getElementById('str');
   round.addEventListener('click', (e) => {

@@ -38,13 +38,6 @@ background-color: white;
     cursor: pointer;
     display: inherit;
 }
-/* button:focus{
-  display: inherit;
-} */
-/* button:focus ~ .news {
-  height: auto;
-} */
-
 
 .type{
 color: white;

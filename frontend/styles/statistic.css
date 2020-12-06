@@ -9,7 +9,6 @@
   position: relative;
   padding-top: 5em;
   width: 430px;
-  /* margin: 0 auto; */
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;

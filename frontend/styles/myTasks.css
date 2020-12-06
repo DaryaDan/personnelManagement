@@ -2,12 +2,10 @@
   font-size: 2em;
     position: relative;
     display: inline-block;
-    margin: 10px 0 0 10px;
+    margin: 20px 0 0 40px;
     cursor: pointer;
-  /* float: right; */
 }
 
-/* Tooltip text */
 .tooltip .tooltiptext {
     visibility: hidden;
     width: 120px;
@@ -16,8 +14,6 @@
     text-align: center;
     padding: 5px 0;
     border-radius: 6px;
-
-    /* Position the tooltip text - see examples below! */
     position: absolute;
     z-index: 1;
 }
@@ -26,7 +22,6 @@
   font-size: 0.5em;
 }
 
-/* Show the tooltip text when you mouse over the tooltip container */
 .tooltip:hover .tooltiptext {
     visibility: visible;
 }
@@ -36,9 +31,9 @@
 .html5-progress-bar {
   position: relative;
   padding-top: 4em;
+  min-height: 93vh;
 }
 
-/* All good till now. Now we'll style the background */
 progress::-webkit-progress-bar {
     background: #ffffff;
     border-radius: 5px;
@@ -62,13 +57,11 @@ progress::-moz-progress-bar {
       height: 20px;
       margin: 5px 1vw 20px;
       display: block;
-      /* Important Thing */
       -webkit-appearance: none;
       border: none;
     }
 
 
-    /* Now the value part */
     progress::-webkit-progress-value {
       border-radius: 5px;
       box-shadow: inset 0 1px 1px 0 rgba(255, 255, 255, 0.4);
@@ -77,12 +70,10 @@ progress::-moz-progress-bar {
       -webkit-linear-gradient(top, rgba(255, 255, 255, 0.25), rgba(0, 0, 0, 0.2)),
       -webkit-linear-gradient(left, #17ba72, #22c441);
 
-      /* Looks great, now animating it */
       background-size: 25px 14px, 100% 100%, 100% 100%;
       -webkit-animation: move 5s linear 0 infinite;
     }
 
-    /* That's it! Now let's try creating a new stripe pattern and animate it using animation and keyframes properties  */
 
     @-webkit-keyframes move {
       0% {background-position: 0px 0px, 0 0, 0 0}
@@ -165,26 +156,6 @@ h2 {
   display: block;
   pointer-events: auto;
 }
-
- /* .prefix-close {
-  background: #9AD3DE;
-  border: 0;
-  border-radius: 4px;
-  padding: 18px 30px;
-  font-size: 18px;
-  color: #FFFFFF;
-  cursor: pointer;
-}
- .prefix-close:focus {
-  outline: none;
-}
- .prefix-close:hover {
-  background: #c0e4eb;
-}
-
-.close{
-  margin-top: 30px;
-} */
 
 .resSub{
   margin-left: 10px;
