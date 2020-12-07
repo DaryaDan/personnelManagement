@@ -4,8 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="../styles/style.css" rel="stylesheet">
-<title>Главная админа</title>
-<link rel="icon" href="#" type="image/x-icon">
+<link href="../styles/mainUser.css" rel="stylesheet">
+<title>Новости</title>
+<link rel="icon" href="https://i.ibb.co/55g6YBc/image.png" type="image/x-icon">
 </head>
 <body>
     <header class="header">
@@ -16,28 +17,27 @@
 
     <nav id="nav" class="nav">
         <ul class="menu">
-          <li><a href="#">Личный кабинет</a></li>
+          <li><a href="aboutMeAdmin.html">Личный кабинет</a></li>
           <li><a href="allStaff.html">Сотрудники</a></li>
           <li class="p_menu"><a class = "link">Добавить</a>
               <ul class="v_menu">
-                <li><a href="#">Пользователя</a></li>
+                <li><a href="newUser.html">Пользователя</a></li>
                 <li><a href="newTask.html">Задачу</a></li>
                 <li><a href="news.html">Новость</a></li>
               </ul>
           </li>
-          <li><a href="#">Переписка</a></li>
+          <li><a href="correspondAdmin.html">Переписка</a></li>
           <li><a href="statisticAdmin.html">Статистика</a></li>
-            <li><a href="#">О компании</a></li>
             <li><a href="registration.html" id="butExit">Вход</a></li>
               </ul>
       </nav>
 
     <div class="line">
-      <p class="dropdown"><img src="https://www.meme-arsenal.com/memes/93da8ee2c78577c10aa5dbe102b7ae65.jpg" alt="Логотип"></p>
-      <h3 class="dropdown">RS Lang</h3>
+      <p class="dropdown"><img src="https://i.ibb.co/fVJ5mmk/image.png" alt="Логотип" border="0" ></p>
+      <h3 class="dropdown">Моя компания</h3>
       <span class = "contener">
         <div class="dropdown">
-        <a href="#" class="dropbtn">Личный кабинет</a>
+        <a href="aboutMeAdmin.html" class="dropbtn">Личный кабинет</a>
         </div>
     <div class="dropdown">
   <a href="allStaff.html" class="dropbtn">Сотрудники</a>
@@ -45,35 +45,35 @@
     <div class="dropdown">
       <button class="dropbtn">Добавить</button>
       <div class="dropdown-content">
-        <a href="#">Пользователя</a>
+        <a href="newUser.html">Пользователя</a>
         <a href="newTask.html">Задачу</a>
         <a href="news.html">Новость</a>
       </div>
     </div>
     <div class="dropdown">
-    <a href="#" class="dropbtn">Переписка</a>
+    <a href="correspondAdmin.html" class="dropbtn">Переписка</a>
     </div>
     <div class="dropdown">
     <a href="statisticAdmin.html" class="dropbtn">Статистика</a>
     </div>
     <div class="dropdown">
-    <a href="#" class="dropbtn">О компании</a>
-    </div>
-    <div class="dropdown">
-        <button class="button-input" id = "but-autorization" data-hover="Выход" href="index.html"><a id = "autorization" href="registration.html">Вход</a></button>
+      <button class="button-input" id = "but-autorization" data-hover="Выход" href="../index.html"><a id = "autorization" href="registration.html">Вход</a></button>
     </div>
   </span>
   </div>
   </header>
 
+  <div class="newsTitle">Новости компании</div>
+    <main id="main"></main>
 
-  <footer class="footer-distributed">
-          <div class="footer-left">
-          <p class = "School">RS School 2020q1</p>
-        </div>
-  </footer>
+    <footer class="footer-distributed">
+            <div class="footer-left">
+            <a class = "School" href="https://github.com/DaryaDan/personnelManagement" target="_blank">Ссылка на GitHub</a>
+          </div>
+    </footer>
 
   <script src="../scripts/requests.js"></script>
     <script src="../scripts/menu.js"></script>
+      <script src="../scripts/mainUser.js"></script>
   </body>
   </html>
