@@ -1,44 +1,68 @@
-* {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+#content{
+  position: relative;
+	min-height:200px;
+	margin: 0 auto;
+  padding: 4.5em 0 0;
+	background: #D1D1D1;
+	background: repeating-linear-gradient(-45deg, #fbfcfe , #fbfcfe 30px, #e9f5f7 30px, #e9f5f7 60px);
 }
 
-body {
-  padding: 20px 15%;
+h1 {
+	font-family: 'Questrial', Verdana, sans-serif;
+	text-align:center;
+	font-size:20px;
+	padding:0;
+	margin:0 0 20px 0;
+	position:relative;
 }
-form header {
-  margin: 0 0 20px 0;
-}
-form header div {
-  font-size: 90%;
-  color: #999;
-}
-form header h2 {
-  margin: 0 0 5px 0;
-}
-form > div {
-  clear: both;
-  overflow: hidden;
-  padding: 1px;
-  margin: 0 0 10px 0;
-}
-form > div > label,
-legend {
-width: 25%;
-  float: left;
-  padding-right: 10px;
-}
-form > div > div {
-  width: 75%;
-  float: right;
+form {
+  position: relative;
+  margin: 0 auto;
+  padding: 0 15% 5px;
+  width: 60vw;
 }
 
-.input {
-  /* border: 0; */
-  background-color: #1bb7973d;
-  line-height: 32px;
-  font-size: 13px;
+input:not([type="submit"]),
+	textarea, select{
+	outline:none;
+	display:block;
+	padding:4px 8px;
+	border:1px dashed #DBDBDB;
+	font-family:'Droid Sans',Tahoma,Arial,Verdana sans-serif;
+	font-size:14px;
+	border-radius:2px;
+	transition:background 0.2s linear,
+	box-shadow 0.6s linear;
+}
+
+#Field1, #Field2, #Field3, #Field4, select, textarea{
+  	width:380px;
+}
+
+textarea{
+	min-height:150px;
+	resize:vertical
+}
+
+input[type=submit], input[type=reset]{
+	margin-left:5vw;
+  display: inline-block;
+	cursor:pointer;
+	background:none;
+	border:none;
+	font-family: 'Alice',serif;
+	font-size:16px;
+	padding:10px 4px;
+	border:1px solid #E0E0E0;
+	text-shadow: 0px 1px  1px #E8E8E8;
+	background: rgb(247,247,247);
+	border-radius:5px;
+	box-shadow:0px 1px 1px #FFF inset, 0 0 0px 5px #EAEAEA;
+	transition:all 0.2s linear;
+}
+
+.input, select {
+  background-color: rgb(247 247 247);
 }
 .input:hover,
 .input:focus,
@@ -46,54 +70,14 @@ form > div > div {
   outline: 0;
 }
 
-input[type=text],
-input[type=date],
-input[type=radio],
-textarea {
-width: 100%;
-  border-top: 1px solid #ccc;
-  border-left: 1px solid #ccc;
-  border-right: 1px solid #eee;
-  border-bottom: 1px solid #eee;
-}
-#Field4,
-input[type=date],
-input[type=radio]{
-  width: 50%;
-}
-input[type=text]:focus,
-input[type=date]:focus,
-input[type=radio]:focus,
-textarea:focus {
-  outline: 0;
-  border-color: #4697e4;
+form .element{
+    margin: 15px 0;
 }
 
-@media (max-width: 600px) {
-  form > div {
-    margin: 0 0 15px 0;
-  }
-  form > div > label,
-  legend {
-  width: 100%;
-    float: none;
-    margin: 0 0 5px 0;
-  }
-  form > div > div {
-    width: 100%;
-    float: none;
-  }
-  input[type=text],
-  input[type=date],
-  input[type=radio],
-  textarea,
-  select {
-    width: 100%;
-  }
+#content > form > div:nth-child(6) > div > p{
+  padding: 0 30px;
 }
-@media (min-width: 1200px) {
-  form > div > label,
-legend {
-  text-align: right;
-  }
+
+input[type=submit]:hover, input[type=reset]:hover{
+	background: rgb(210 210 210);
 }
