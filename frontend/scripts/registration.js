@@ -35,7 +35,7 @@ if(fullName.length!==0&&email.length!==0&&password.length!==0&&code===code1){
       roots: `${roots}`,
       password: `${password}`
     };
-    let dataAll = AddOne(url,body).then(result =>console.log(result));
+    let dataAll = AddOne(url,body);
     logElem.textContent = "Успешно";
     localStorage.email=email;
     localStorage.name=fullName;

@@ -30,14 +30,8 @@ else {
   document.getElementById('category').innerHTML = result[i].position;
 }
 }
-else {
-  img.src = "https://morane.by/images/work1.png";
-  parentEl.appendChild(img);
 }
 }
-}
-
-
 
 let replase = document.getElementById('change');
     replase.onclick = function editData() {

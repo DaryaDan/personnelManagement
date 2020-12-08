@@ -4,9 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="../styles/style.css" rel="stylesheet">
-<link href="../styles/news.css" rel="stylesheet">
-<title>Добавить новость</title>
-<link rel="icon" href="#" type="image/x-icon">
+<link href="../styles/newTask.css" rel="stylesheet">
+<title>Новая новость</title>
+<link rel="icon" href="https://i.ibb.co/55g6YBc/image.png" type="image/x-icon">
+<link href='http://fonts.googleapis.com/css?family=Questrial|Droid+Sans|Alice' rel='stylesheet' type='text/css'>
 </head>
 <body>
     <header class="header">
@@ -17,54 +18,58 @@
 
     <nav id="nav" class="nav">
         <ul class="menu">
-          <li><a href="#">Главная</a></li>
-          <li><a href="#">Мои коллеги</a></li>
-            <li class="p_menu"><a class = "link">Мои задачи</a>
-                <ul class="v_menu">
-                  <li><a href="myTasks.html">Новые</a></li>
-                  <li><a href="#">В процессе</a></li>
-                  <li><a href="#">Завершенные</a></li>
-                </ul>
-            </li>
-            <li><a href="#">О компании</a></li>
+          <li><a href="aboutMeAdmin.html">Личный кабинет</a></li>
+          <li><a href="mainAdmin.html">Новости</a></li>
+          <li><a href="allStaff.html">Сотрудники</a></li>
+          <li class="p_menu"><a class = "link">Добавить</a>
+              <ul class="v_menu">
+                <li><a href="newUser.html">Пользователя</a></li>
+                <li><a href="newTask.html">Задачу</a></li>
+              </ul>
+          </li>
+          <li><a href="correspondAdmin.html">Переписка</a></li>
+          <li><a href="statisticAdmin.html">Статистика</a></li>
             <li><a href="registration.html" id="butExit">Вход</a></li>
               </ul>
       </nav>
 
     <div class="line">
-      <p class="dropdown"><img src="https://www.meme-arsenal.com/memes/93da8ee2c78577c10aa5dbe102b7ae65.jpg" alt="Логотип"></p>
-      <h3 class="dropdown">RS Lang</h3>
+      <p class="dropdown"><img src="https://i.ibb.co/fVJ5mmk/image.png" alt="Логотип" border="0" ></p>
+      <h3 class="dropdown">Моя компания</h3>
       <span class = "contener">
         <div class="dropdown">
-        <a href="#" class="dropbtn">Главная</a>
+        <a href="aboutMeAdmin.html" class="dropbtn">Личный кабинет</a>
+        </div>
+        <div class="dropdown">
+        <a href="mainAdmin.html" class="dropbtn">Новости</a>
         </div>
     <div class="dropdown">
-  <a href="#" class="dropbtn">Мои коллеги</a>
+  <a href="allStaff.html" class="dropbtn">Сотрудники</a>
     </div>
     <div class="dropdown">
-      <button class="dropbtn">Мои задачи</button>
+      <button class="dropbtn">Добавить</button>
       <div class="dropdown-content">
-        <a href="myTasks.html">Новые</a>
-        <a href="#">В процессе</a>
-        <a href="#">Завершенные</a>
+        <a href="newUser.html">Пользователя</a>
+        <a href="newTask.html">Задачу</a>
       </div>
     </div>
     <div class="dropdown">
-    <a href="#" class="dropbtn">О компании</a>
+    <a href="correspondAdmin.html" class="dropbtn">Переписка</a>
     </div>
     <div class="dropdown">
-  <button class="button-input" id = "but-autorization" data-hover="Выход" href="index.html"><a id = "autorization" href="registration.html">Вход</a></button>
+    <a href="statisticAdmin.html" class="dropbtn">Статистика</a>
+    </div>
+    <div class="dropdown">
+      <button class="button-input" id = "but-autorization" data-hover="Выход" href="../index.html"><a id = "autorization" href="registration.html">Вход</a></button>
     </div>
   </span>
   </div>
   </header>
 
+  <div id="content">
+    <h1>Добавьте новую новость</h1>
   <form onsubmit="return false;">
-
-    <header>
-      <h2>Добавьте новость</h2>
-      </header>
-    <div>
+    <div class="element">
       <label class="desc" id="title106" for="Field0">
       Выберите категорию новости
       </label>
@@ -80,27 +85,25 @@
       </div>
     </div>
 
-    <div>
+    <div class="element">
       <label class="desc" id="title2" for="Field2">Новость</label>
       <div>
         <textarea id="Field2" class="input" name="Field2" spellcheck="true" rows="10" cols="50" tabindex="4" required></textarea>
       </div>
     </div>
 
-    <div>
-  <div>
+    <div class="element">
     <input id="saveForm" name="saveForm" type="submit" value="Создать" onclick="newNews();">
      <input type="reset" value="Очистить"/>
       <span class="stage1"></span>
-      </div>
   </div>
 
   </form>
-
+  </div>
 
   <footer class="footer-distributed">
           <div class="footer-left">
-          <p class = "School">RS School 2020q1</p>
+          <a class = "School" href="https://github.com/DaryaDan/personnelManagement" target="_blank">Ссылка на GitHub</a>
         </div>
   </footer>
 

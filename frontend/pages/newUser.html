@@ -4,9 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="../styles/style.css" rel="stylesheet">
-<link href="../styles/newUser.css" rel="stylesheet">
+<link href="../styles/newTask.css" rel="stylesheet">
 <title>Новый пользователь</title>
 <link rel="icon" href="https://i.ibb.co/55g6YBc/image.png" type="image/x-icon">
+<link href='http://fonts.googleapis.com/css?family=Questrial|Droid+Sans|Alice' rel='stylesheet' type='text/css'>
 </head>
 <body>
     <header class="header">
@@ -65,15 +66,85 @@
   </div>
   </header>
 
+<div id="content">
+  <h1>Добавьте нового пользователя</h1>
+<form onsubmit="return false;">
 
-    <footer class="footer-distributed">
-            <div class="footer-left">
-            <a class = "School" href="https://github.com/DaryaDan/personnelManagement" target="_blank">Ссылка на GitHub</a>
-          </div>
-    </footer>
+  <div class="element">
+    <label class="desc" id="title1" for="Field1">ФИО сотрудника</label>
+    <div>
+      <input id="Field1" name="Field1" type="text" class="field text input" value="" size="8" tabindex="1" required>
+    </div>
+  </div>
 
-  <script src="../scripts/requests.js"></script>
-    <script src="../scripts/menu.js"></script>
-      <script src="../scripts/newUser.js"></script>
-  </body>
-  </html>
+  <div class="element">
+    <label class="desc" id="title2" for="Field2">Электронная почта</label>
+    <div>
+      <input id="Field2" name="Field2" type="email" class="field text input" value="" size="8" tabindex="1" required>
+    </div>
+  </div>
+
+  <div class="element">
+    <label class="desc" id="title3" for="Field3">Права администратора</label>
+    <div>
+      <input id="Field3" name="Field3" type="checkbox" class="field text input check" value="" size="8" tabindex="1">
+    </div>
+  </div>
+
+  <div class="element">
+    <label class="desc" id="title4" for="Field4">Пароль</label>
+    <div>
+      <input id="Field4" name="Field4" type="text" class="field text input" value="" size="8" tabindex="1" required>
+    </div>
+  </div>
+
+  <div class="element">
+    <label class="desc" id="title5" for="Field5">Телефон</label>
+    <div>
+      <input id="Field5" name="Field5" type="text" class="field text input" value="" size="8" tabindex="1" required>
+    </div>
+  </div>
+
+  <div class="element">
+    <label class="desc" id="title6" for="Field6">
+      День рождения
+    </label>
+    <div>
+      <input id="Field6" class="input" name="Field6" type="date" spellcheck="false" value="" required>
+   </div>
+  </div>
+
+  <div class="element">
+    <label class="desc" id="title7" for="Field7">Ссылка на фото</label>
+    <div>
+      <input id="Field7" name="Field7" type="text" class="field text input" value="" size="8" tabindex="1" required>
+    </div>
+  </div>
+
+  <div class="element">
+    <label class="desc" id="title8" for="Field8">Позиция</label>
+    <div>
+      <input id="Field8" name="Field8" type="text" class="field text input" value="" size="8" tabindex="1" required>
+    </div>
+  </div>
+
+  <div class="element">
+  <input id="saveForm" name="saveForm" type="submit" value="Создать">
+   <input type="reset" value="Очистить"/>
+    <span class="stage1"></span>
+</div>
+
+</form>
+</div>
+
+<footer class="footer-distributed">
+        <div class="footer-left">
+        <a class = "School" href="https://github.com/DaryaDan/personnelManagement" target="_blank">Ссылка на GitHub</a>
+      </div>
+</footer>
+
+  <script src="../scripts/menu.js"></script>
+<script src="../scripts/requests.js"></script>
+  <script src="../scripts/newUser.js"></script>
+</body>
+</html>
