@@ -10,16 +10,20 @@
     margin: 20px 0 0 40px;
     cursor: pointer;
     color: red;
+    border-bottom: 2px solid;
+}
+
+.string{
+    cursor: pointer;
 }
 
 .page a {
     text-decoration: none;
     display: inline-block;
-    padding: 8px 16px;
+    padding: 3px 1px 3px 0;
 }
 
 .page a:hover {
-    background-color: #fbfcfe;
     color: black;
 }
 
@@ -33,6 +37,7 @@ h1 {
 
 .tasks{
   display: none;
+  cursor: default;
 }
 
 .liRed{

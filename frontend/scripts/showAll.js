@@ -44,7 +44,7 @@ else{
       percent+=((Number(trueT)/lenSub)*100).toFixed(2);
 
 
-    addArr += `<li id=${result[u].taskID}>
+    addArr += `<li id=${result[u].taskID} class="string">
     <div class="resSub">${result[u].taskName} (${percent}%) - до ${result[u].term}</div>
     <div class="tasks" id="tasks${result[u].taskID}"><ul>${tasks}</ul></div></li>`
 }
