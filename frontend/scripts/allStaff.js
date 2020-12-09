@@ -51,66 +51,9 @@ staff.innerHTML = str;
 
 //просмотреть выполнение задач сотрудниками
 
-const modal = document.getElementById('Modal');
+
 const newT = document.getElementById('main');
 newT.addEventListener('click', (event) => {
-  eventTask(event);
+  localStorage.event=event.path[2].id;
+  document.location.href = "showAll.html";
 });
-
-
-  function eventTask(event) {
-  modal.style.display = "block";
-  let urlTasks=`http://localhost:3000/tasks`;
-  let data = GetAll(urlTasks).then(result =>{
-    let k=result.length;
-    let allManTasks=[];
-    for (let i=0;i<k;i++){
-if(Number(event.path[2].id)===result[i].manID){
-allManTasks.push(result[i]);
-}
-    }
-      modalNew(allManTasks);
-  });
-}
-
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
-
-function modalNew(result){
-  let taskNew = document.getElementById('Modal');
-
-  let addArr=" ";
-  let len=result.length;
-
-if(len===0){
-  taskNew.innerHTML = `
-  <div>
-  <h2>Нет задач</h2>
-  </div>`
-}
-else{
-  for(let u=0;u<len;u++){
-    console.log(result[u]);
-    let lenSub=result[u].subtasks.length;
-    let trueT=0;
-      for(let s=0;s<lenSub;s++){
-        result[u].subtasks[s][1]==="true"?trueT++:false;
-      }
-      let percent=" ";
-      percent+=((Number(trueT)/lenSub)*100).toFixed(2);
-    addArr += `<li><div class="resSub">${result[u].taskName} (${percent}%)</div></li>`
-}
-
-  taskNew.innerHTML = `
-  <div>
-  <h2>Задачи</h2>
-  <div class="prefix-tabs"><ol id="str">
-${addArr}
-</ol>
-  </div>
-  </div>`
-}
-}

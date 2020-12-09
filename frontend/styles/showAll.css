@@ -1,0 +1,48 @@
+.page{
+      padding-top: 5em;
+      min-height: 93vh;
+}
+
+.back{
+  font-size: 1em;
+    position: relative;
+    display: inline-block;
+    margin: 20px 0 0 40px;
+    cursor: pointer;
+    color: red;
+}
+
+.page a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 16px;
+}
+
+.page a:hover {
+    background-color: #fbfcfe;
+    color: black;
+}
+
+h1 {
+	text-align:center;
+	font-size:20px;
+	padding:0;
+	margin:10px 0 20px 0;
+	position:relative;
+}
+
+.tasks{
+  display: none;
+}
+
+.liRed{
+    list-style-type: disc;
+    color: red;
+    margin-left: 17px;
+}
+
+.liGreen{
+    list-style-type: disc;
+    color: green;
+    margin-left: 17px;
+}
