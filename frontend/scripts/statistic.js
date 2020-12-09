@@ -48,6 +48,8 @@ new Chart(document.getElementById("line-chart"), {
   }
 });
 
+//за месяц
+
 let pieMy=[0,0,0];
 let pieAll=[0,0,0];
 var date = new Date();
@@ -131,6 +133,89 @@ new Chart(document.getElementById("pieChart2"), {
       title: {
         display: true,
         text: 'Моя статистика за месяц'
+      }
+    }
+});
+
+//за год
+
+let pieMyAll=[0,0,0];
+let pieAllAll=[0,0,0];
+
+for(let i=0;i<length;i++){ //перебор всех задач
+let subLength=result[i].subtasks.length;  //длина подзадач совпавшей задачи
+let a=0,b=0;
+for(let k=0;k<subLength;k++){  //перебор подзадач задачи
+if(result[i].subtasks[k][1]==="true"){  //если она выполнена
+a++;
+}
+else {  //иначе
+  b++;
+}
+}
+if(a===0){   //записываем в наш массив
+  pieAllAll[2]++;
+}
+else if(b===0){
+  pieAllAll[0]++;
+}
+else {
+  pieAllAll[1]++;
+}
+
+if(result[i].manID===Number(localStorage.personID)){ //для нашего пользователя
+  let aa=0,bb=0;
+  for(let k=0;k<subLength;k++){  //перебор подзадач задачи
+  if(result[i].subtasks[k][1]==="true"){  //если она выполнена
+  aa++;
+  }
+  else {  //иначе
+    bb++;
+  }
+  }
+  if(a===0){
+    pieMyAll[2]++;
+  }
+  else if(b===0){
+    pieMyAll[0]++;
+  }
+  else {
+    pieMyAll[1]++;
+  }
+};
+};
+new Chart(document.getElementById("pieChart11"), {
+    type: 'pie',
+    data: {
+      labels: ["Новые", "В процессе", "Завершенные"],
+      datasets: [{
+        label: "задач",
+        backgroundColor: ["#3e95cd", "#8e5ea2","#c45850"],
+        data: pieAllAll
+      }]
+    },
+    options: {
+      title: {
+        display: true,
+        text: 'Общая статистика за год'
+      }
+    }
+});
+
+new Chart(document.getElementById("pieChart21"), {
+    type: 'pie',
+    data: {
+      labels: ["Новые", "В процессе", "Завершенные"],
+      datasets: [{
+        label: "задач",
+        backgroundColor: ["#3e95cd", "#8e5ea2","#c45850"],
+        data: pieMyAll
+      }]
+    },
+    options: {
+      title: {
+        display: true,
+        text: 'Моя статистика за год'
       }
     }
 });

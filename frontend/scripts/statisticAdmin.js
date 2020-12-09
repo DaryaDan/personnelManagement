@@ -28,13 +28,21 @@ new Chart(document.getElementById("line-bar"), {
       }]
   },
   options: {
+    responsive: true,
     title: {
       display: true,
       text: 'Годовой график задач'
-    }
+    },
+    scales: {
+      yAxes: [{
+        ticks: {
+          stepSize: 1,
+          beginAtZero: true,
+        }
+      }]
+    },
   }
 });
-
 //самый загруженный/незагруженный месяц
 let hardM=allTasks.indexOf( Math.max.apply(null,allTasks));
 let easyM=allTasks.indexOf( Math.min.apply(null,allTasks));
@@ -56,13 +64,16 @@ let ranks = array.reduce(function(totals, num) {
 }, {});
 
 let max = 0;
+let maxId=0;
 Object.keys(ranks).forEach(function(num) {
     if (ranks[num] > max) {
-        max = num;
+        max = ranks[num];
+        maxId=num;
     }
+
 });
 let urlMain=`http://localhost:3000/main`;
-let data = GetAll(urlMain).then(data => main(data, max, ranks[max]));
+let data = GetAll(urlMain).then(data => main(data, max, maxId));
 
 //проценты
 let allT=[0,0,0];
@@ -86,7 +97,6 @@ else if(b===0){
 else {
   allT[1]++;
 }}
-console.log(allT);
 let percent = document.getElementById('percent');
 percent.innerHTML += `<div>
 Процент выполненных задач - ${(allT[0]/(allT[0]+allT[1]+allT[2])*100).toFixed(2)}%,
@@ -98,14 +108,14 @@ percent.innerHTML += `<div>
  tasksALL.innerHTML += `<div>Всего задач - ${allT[0]+allT[1]+allT[2]}</div>`
 }
 
-function main(data,max, ranks) {
+function main(data,max, maxId) {
   let length= data.length;
   let name;
   for(let m=0;m<length;m++){
-  if (data[m].personID===+max){
+  if (data[m].personID===+maxId){
     name=data[m].fullName;
   }
   };
   let people = document.getElementById('people');
-  people.innerHTML += `<div>Самый загруженный сотрудник - ${name} (${ranks} задач(-а) в год)</div>`
+  people.innerHTML += `<div>Самый загруженный сотрудник - ${name} (${max} задач(-а) в год)</div>`
 }
