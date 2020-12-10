@@ -26,6 +26,10 @@
     visibility: visible;
 }
 
+.info{
+   width: 20px;
+   margin-left: 10px;
+}
 
 
 .html5-progress-bar {
@@ -110,8 +114,12 @@ progress::-moz-progress-bar {
 display: none;
 }
 
+#Modal1{
+display: none;
+}
+
 h2 {
-  font-size: 45px;
+  font-size: 35px;
   text-align: center;
   color: #666666;
   margin: 0 0 30px 0;
@@ -147,7 +155,6 @@ h2 {
   background: #FFFFFF;
   padding: 30px;
   z-index: 5001;
-  text-align: center;
   border: 5px solid #9AD3DE;
   border-radius: 10px;
   box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.4);
@@ -157,8 +164,44 @@ h2 {
   pointer-events: auto;
 }
 
+.prefix-Dialog1 {
+  background: rgba(100, 100, 100, 0.5);
+  position: fixed;
+  display: none;
+	z-index: 99999;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  word-break: break-all;
+}
+.prefix-Dialog1 > div {
+  max-width: 600px;
+  width: 70%;
+  position: fixed;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  background: #FFFFFF;
+  padding: 30px;
+  z-index: 5001;
+  border: 5px solid #9AD3DE;
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.4);
+}
+.prefix-Dialog1.active {
+  display: block;
+  pointer-events: auto;
+}
+
 .resSub{
   margin-left: 10px;
+  font-size: 20px;
+}
+
+.resSub1{
+  margin: 10px;
   font-size: 20px;
 }
 

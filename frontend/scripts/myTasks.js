@@ -47,7 +47,7 @@ percent+="%"
 if(Number(compliteLength)===0){
 strNew += `
 <div id="${result[i].taskID}"><a id="${result[i].taskID}">
-<div id="${result[i].taskID}">${result[i].taskName}${percent}
+<div id="${result[i].taskID}">${result[i].taskName} (${percent})<img id="img${result[i].taskID}" class="info" src="https://i.ibb.co/2jPbQSX/info.png" alt="info">
 <progress id="${result[i].taskID}" value=${compliteLength} max=${subLength}></progress>
   </a></div>`
   }
@@ -55,7 +55,7 @@ strNew += `
   else if(Number(compliteLength)<subLength){
   strInProcess += `
   <div id="${result[i].taskID}"><a id="${result[i].taskID}">
-  <div id="${result[i].taskID}">${result[i].taskName}${percent}
+  <div id="${result[i].taskID}">${result[i].taskName} (${percent})<img id="img${result[i].taskID}" class="info" src="https://i.ibb.co/2jPbQSX/info.png" alt="info">
   <progress id="${result[i].taskID}" value=${compliteLength} max=${subLength}></progress>
     </a></div>`
     }
@@ -63,7 +63,7 @@ strNew += `
     else if(Number(compliteLength)===subLength){
     strComplete += `
     <div id="${result[i].taskID}"><a id="${result[i].taskID}">
-    <div id="${result[i].taskID}">${result[i].taskName}${percent}
+    <div id="${result[i].taskID}">${result[i].taskName} (${percent})<img id="img${result[i].taskID}" class="info" src="https://i.ibb.co/2jPbQSX/info.png" alt="info">
     <progress id="${result[i].taskID}" value=${compliteLength} max=${subLength}></progress>
       </a></div>`
       }
@@ -76,9 +76,10 @@ taskComplete.innerHTML = strComplete;
 
 
 
-/* всплывающее окно */
+/* всплывающее окно*/
 
 const modal = document.getElementById('Modal');
+const modal1 = document.getElementById('Modal1');
 // let span;
 const newT1 = document.getElementById('tasksNew');
 newT1.addEventListener('click', (event) => {
@@ -96,27 +97,35 @@ newT3.addEventListener('click', (event) => {
 });
 
   function eventTask(event) {
-  modal.style.display = "block";
+
   let urlMain=`http://localhost:3000/tasks`;
   let data = GetAll(urlMain).then(result =>{
     let k=result.length;
     for (let i=0;i<k;i++){
 if(Number(event.target.id)===result[i].taskID){
+    modal.style.display = "block";
   modalNew(result[i]);
+}
+let infoId="img"+result[i].taskID;
+if(event.target.id===infoId){
+    modal1.style.display = "block";
+  modalInfo(result[i]);
 }
     }
   });
 }
 
 window.onclick = function(event) {
-    if (event.target == modal) {
+    if (event.target === modal) {
         modal.style.display = "none";
         location.reload();
+    }
+    if (event.target === modal1) {
+        modal1.style.display = "none";
     }
 }
 
 function modalNew(result){
-  let taskNew = document.getElementById('Modal');
 
   let addArr=" ";
   let len=result.subtasks.length;
@@ -129,14 +138,14 @@ else {
 }
 }
 
-  taskNew.innerHTML = `
+  modal.innerHTML = `
   <div>
   <h2>${result.taskName}</h2>
   <div class="prefix-tabs"><ol id="str">
 ${addArr}
 </ol>
   </div>
-  </div>` 
+  </div>`
 
   const round = document.getElementById('str');
   round.addEventListener('click', (e) => {
@@ -161,6 +170,16 @@ if(h.innerHTML===result.subtasks[s][0]){
  /////////////////////////ВЫЗЫВАЮ АПДЕЙТ
 updateTask(result);
   });
+}
+
+function modalInfo(result){
+  modal1.innerHTML = `
+  <div class="prefix-tabs">
+  <h2>${result.taskName}</h2>
+  <div class="resSub1">${result.description}</div>
+  <div class="resSub1">Срок до: ${result.term}</div>
+  <div class="resSub1">Тип задачи: ${result.type}</div>
+  </div>`
 }
 
 function updateTask(result) {
