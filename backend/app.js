@@ -1,14 +1,14 @@
 var express = require('express'),
-  app = express(),
-  port = process.env.PORT || 3000,
-  mongoose = require('mongoose'),
-  Main  = require('./restapi/models/mainModel'),
-  Description  = require('./restapi/models/descriptionModel'),
-  Tasks  = require('./restapi/models/tasksModel'),
-  Correspond  = require('./restapi/models/correspondModel'),
-  News  = require('./restapi/models/newsModel'),
-  bodyParser = require('body-parser');
-  cors = require('cors');
+    app = express(),
+    port = process.env.PORT || 3000,
+    mongoose = require('mongoose'),
+    Main = require('./restapi/models/mainModel'),
+    Description = require('./restapi/models/descriptionModel'),
+    Tasks = require('./restapi/models/tasksModel'),
+    Correspond = require('./restapi/models/correspondModel'),
+    News = require('./restapi/models/newsModel'),
+    bodyParser = require('body-parser');
+cors = require('cors');
 
 mongoose.Promise = global.Promise;
 mongoose.connect('mongodb://DaryaDan:G7qRSG%40!87MuhA7@cluster0-shard-00-00.nua7c.mongodb.net:27017,cluster0-shard-00-01.nua7c.mongodb.net:27017,cluster0-shard-00-02.nua7c.mongodb.net:27017/workbase?ssl=true&replicaSet=atlas-twvmn3-shard-0&authSource=admin&retryWrites=true&w=majority', { useMongoClient: true });
@@ -31,7 +31,7 @@ routes4(app);
 routes5(app);
 
 app.use(function(req, res) {
-  res.status(404).send({url: req.originalUrl + ' not found'})
+    res.status(404).send({ url: req.originalUrl + ' not found' })
 });
 
 app.listen(port);

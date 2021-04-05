@@ -1,10 +1,10 @@
-.page{
-      padding-top: 5em;
-      min-height: 93vh;
+.page {
+    padding-top: 5em;
+    min-height: 93vh;
 }
 
-.back{
-  font-size: 20px;
+.back {
+    font-size: 20px;
     position: relative;
     display: inline-block;
     margin: 20px 0 0 40px;
@@ -13,7 +13,7 @@
     border-bottom: 2px solid;
 }
 
-.string{
+.string {
     cursor: pointer;
     font-size: 20px;
     margin: 15px auto;
@@ -30,29 +30,29 @@
 }
 
 h1 {
-	text-align:center;
-	font-size:25px;
-	padding:0;
-	margin:10px 0 0 50px;
-	position:relative;
+    text-align: center;
+    font-size: 25px;
+    padding: 0;
+    margin: 10px 0 0 50px;
+    position: relative;
 }
 
-.prefix-tabs{
-  margin: 0px 25vw;
+.prefix-tabs {
+    margin: 0px 25vw;
 }
 
-.tasks{
-  display: none;
-  cursor: default;
+.tasks {
+    display: none;
+    cursor: default;
 }
 
-.liRed{
+.liRed {
     list-style-type: disc;
     color: red;
     margin-left: 17px;
 }
 
-.liGreen{
+.liGreen {
     list-style-type: disc;
     color: green;
     margin-left: 17px;

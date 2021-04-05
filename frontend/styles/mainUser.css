@@ -1,10 +1,10 @@
-.newsTitle{
+.newsTitle {
     padding-top: 3em;
     text-align: center;
     font-size: 35px;
 }
 
-#main{
+#main {
     position: relative;
     font-size: 20px;
     width: 70%;
@@ -12,49 +12,50 @@
 }
 
 .card {
-  margin: 35px auto 15px;
-  text-decoration: none;
-  color: #444;
-  position: relative;
-  top: 0;
-  transition: all .1s ease-in;
+    margin: 35px auto 15px;
+    text-decoration: none;
+    color: #444;
+    position: relative;
+    top: 0;
+    transition: all .1s ease-in;
 }
 
 .news {
-  display: block;
-  height: 108px;
-  padding: 5px;
-  margin: 5px 0;
-  outline: none;
-  overflow: hidden;
-  color: black
+    display: block;
+    height: 108px;
+    padding: 5px;
+    margin: 5px 0;
+    outline: none;
+    overflow: hidden;
+    color: black
 }
+
 button {
-  outline: none;
-color: red;
-background-color: white;
+    outline: none;
+    color: red;
+    background-color: white;
     border: none;
     font-size: 16px;
     cursor: pointer;
     display: inherit;
 }
 
-.type{
-color: white;
-padding: 8px;
-font-family: Arial;
+.type {
+    color: white;
+    padding: 8px;
+    font-family: Arial;
 }
 
-.authorName{
-  color: #605757;
-  padding: 8px;
-  font-family: Arial;
-  font-style: italic;
+.authorName {
+    color: #605757;
+    padding: 8px;
+    font-family: Arial;
+    font-style: italic;
 }
 
-.data{
-  color: #605757;
-  padding: 8px;
-  font-family: Arial;
+.data {
+    color: #605757;
+    padding: 8px;
+    font-family: Arial;
     font-style: italic;
 }

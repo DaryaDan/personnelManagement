@@ -8,5 +8,5 @@ module.exports = function(app) {
     app.route('/news/:newsId')
         .get(product.getproduct) //получить 1
         .put(product.update) // обновить 1
-        .delete(product.delete);  //удалить 1
+        .delete(product.delete); //удалить 1
 };

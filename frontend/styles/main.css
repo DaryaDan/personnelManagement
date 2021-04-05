@@ -1,26 +1,27 @@
 /*--------------------------------Section1------------------------------------- */
-#section1{
-  padding-top: 7em;
-  background: #e9f5f7;
-  display: grid;
+
+#section1 {
+    padding-top: 7em;
+    background: #e9f5f7;
+    display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-auto-rows: minmax(11rem, auto);
-    grid-template-areas:
-      "pic pic lozung lozung lozung"
-      "pic pic . . .";
+    grid-template-areas: "pic pic lozung lozung lozung" "pic pic . . .";
 }
 
-#section1 img{
-  width: 650px;
-  height: 450px;
-  grid-area: pic;
+#section1 img {
+    width: 650px;
+    height: 450px;
+    grid-area: pic;
 }
 
-.text{
-  grid-area: lozung;
-  margin: 9rem 40px 0 155px;
-  font-size: 45px;
+.text {
+    grid-area: lozung;
+    margin: 9rem 40px 0 155px;
+    font-size: 45px;
 }
+
+
 /*--------------------------------Section2------------------------------------- */
 
 .grey-line {
@@ -28,26 +29,29 @@
     margin: 0 auto;
 }
 
-.new-word{
-  background: #fbfcfe;
+.new-word {
+    background: #fbfcfe;
 }
 
 .dividing-line {
-  flex-direction: row;
+    flex-direction: row;
     margin: auto;
     padding: 40px 40px 0px 40px;
 }
 
-.font{
-background-color: #e9f5f7;
+.font {
+    background-color: #e9f5f7;
 }
 
-.grey-line, .dividing-line {
+.grey-line,
+.dividing-line {
     display: flex;
     max-width: 1065px;
 }
 
-.dividing-line-background,.dividing-line-background1,.dividing-line-background2 {
+.dividing-line-background,
+.dividing-line-background1,
+.dividing-line-background2 {
     height: 201px;
     min-width: 185px;
     background-repeat: no-repeat;
@@ -55,10 +59,10 @@ background-color: #e9f5f7;
     background-size: contain;
 }
 
-.dividing-line-background{
+.dividing-line-background {
     background-image: url(https://i.ibb.co/WxZWmk1/head.png);
     margin-right: 48px;
-  }
+}
 
 .dividing-line-background1 {
     background-image: url(https://i.ibb.co/Y8D3dyr/work.png);
@@ -96,82 +100,78 @@ background-color: #e9f5f7;
     text-decoration: none;
 }
 
-.dividing-line-opisanie:hover {color: rgba(246, 28, 32, 1);}
+.dividing-line-opisanie:hover {
+    color: rgba(246, 28, 32, 1);
+}
+
 
 /*------------------------------- Размер страницы------------------------------ */
 
 @media (min-width: 1700px) {
-  .text{
-    margin: auto;
-  }
-  .grey-line {
-      display: flex;
-      max-width: 5000px;
-  }
-
-  #section1 img {
-    margin-left: 50%;
+    .text {
+        margin: auto;
+    }
+    .grey-line {
+        display: flex;
+        max-width: 5000px;
+    }
+    #section1 img {
+        margin-left: 50%;
+    }
 }
-}
-
 
 @media (max-width: 1400px) {
-  #section1{
-      grid-template-columns: repeat(1, 1fr);
-      grid-auto-rows: minmax(50px, auto);
-      grid-template-areas:
-        "pic"
-        "lozung"
-        ".";
-  }
-
-  #section1 img{
-    width: 500px;
-    height: 400px;
-    grid-area: pic;
-    margin: auto;
-  }
-
-  .text{
-    margin: 0 auto;
-    font-size: 30px;
-  }
+    #section1 {
+        grid-template-columns: repeat(1, 1fr);
+        grid-auto-rows: minmax(50px, auto);
+        grid-template-areas: "pic" "lozung" ".";
+    }
+    #section1 img {
+        width: 500px;
+        height: 400px;
+        grid-area: pic;
+        margin: auto;
+    }
+    .text {
+        margin: 0 auto;
+        font-size: 30px;
+    }
 }
-
 
 @media (max-width: 700px) {
-.dividing-line {
-  flex-direction: column-reverse;
-}
-
-.dividing-line-background,.dividing-line-background1,.dividing-line-background2{
-    margin: auto;
-    min-width: 120px;
-    height: 120px;
-}
-
-.headline, .dividing-line-text{text-align: center;}
-
-.dividing-line-opisanie{
-  display: block;
-  text-align: center;
-}
+    .dividing-line {
+        flex-direction: column-reverse;
+    }
+    .dividing-line-background,
+    .dividing-line-background1,
+    .dividing-line-background2 {
+        margin: auto;
+        min-width: 120px;
+        height: 120px;
+    }
+    .headline,
+    .dividing-line-text {
+        text-align: center;
+    }
+    .dividing-line-opisanie {
+        display: block;
+        text-align: center;
+    }
 }
 
 @media (max-width: 500px) {
-  #section1 img{
-    width: 300px;
-    height: 240px;
-    margin-top: 35px;
-  }
-  #section1 button {
-  width: 50%;
-  height: 40px;
-  font-size: 8px;
-  }
-
-  .text{
-    margin: 0 auto;
-    font-size: 15px;
-  }
+    #section1 img {
+        width: 300px;
+        height: 240px;
+        margin-top: 35px;
+    }
+    #section1 button {
+        width: 50%;
+        height: 40px;
+        font-size: 8px;
+    }
+    .text {
+        margin: 0 auto;
+        font-size: 15px;
+    }
 }

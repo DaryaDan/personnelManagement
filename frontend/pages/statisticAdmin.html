@@ -1,42 +1,44 @@
 <!DOCTYPE HTML>
 <html>
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link href="../styles/style.css" rel="stylesheet">
-<link href="../styles/statisticAdmin.css" rel="stylesheet">
-<title>Статистика компании</title>
-<link rel="icon" href="https://i.ibb.co/55g6YBc/image.png" type="image/x-icon">
-<script src="../node_modules/chart.js/dist/Chart.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../styles/style.css" rel="stylesheet">
+    <link href="../styles/statisticAdmin.css" rel="stylesheet">
+    <title>Статистика компании</title>
+    <link rel="icon" href="https://i.ibb.co/55g6YBc/image.png" type="image/x-icon">
+    <script src="../node_modules/chart.js/dist/Chart.js"></script>
 </head>
+
 <body>
     <header class="header">
 
-    <div class="nav-toggle">
-    	<div class="nav-toggle-bar"></div>
-    </div>
+        <div class="nav-toggle">
+            <div class="nav-toggle-bar"></div>
+        </div>
 
-    <nav id="nav" class="nav">
-        <ul class="menu">
-          <li><a href="aboutMeAdmin.html">Личный кабинет</a></li>
-          <li><a href="allStaff.html">Сотрудники</a></li>
-          <li class="p_menu"><a class = "link">Добавить</a>
-              <ul class="v_menu">
-                <li><a href="newUser.html">Пользователя</a></li>
-                <li><a href="newTask.html">Задачу</a></li>
-                <li><a href="news.html">Новость</a></li>
-              </ul>
-          </li>
-          <li><a href="correspondAdmin.html">Переписка</a></li>
-          <li><a href="mainAdmin.html">Новости</a></li>
-            <li><a href="registration.html" id="butExit">Вход</a></li>
-              </ul>
-      </nav>
+        <nav id="nav" class="nav">
+            <ul class="menu">
+                <li><a href="aboutMeAdmin.html">Личный кабинет</a></li>
+                <li><a href="allStaff.html">Сотрудники</a></li>
+                <li class="p_menu"><a class="link">Добавить</a>
+                    <ul class="v_menu">
+                        <li><a href="newUser.html">Пользователя</a></li>
+                        <li><a href="newTask.html">Задачу</a></li>
+                        <li><a href="news.html">Новость</a></li>
+                    </ul>
+                </li>
+                <li><a href="correspondAdmin.html">Переписка</a></li>
+                <li><a href="mainAdmin.html">Новости</a></li>
+                <li><a href="registration.html" id="butExit">Вход</a></li>
+            </ul>
+        </nav>
 
-    <div class="line">
-      <p class="dropdown"><img src="https://i.ibb.co/fVJ5mmk/image.png" alt="Логотип" border="0" ></p>
-      <h3 class="dropdown">Моя компания</h3>
-      <span class = "contener">
+        <div class="line">
+            <p class="dropdown"><img src="https://i.ibb.co/fVJ5mmk/image.png" alt="Логотип" border="0"></p>
+            <h3 class="dropdown">Моя компания</h3>
+            <span class="contener">
         <div class="dropdown">
         <a href="aboutMeAdmin.html" class="dropbtn">Личный кабинет</a>
         </div>
@@ -61,28 +63,29 @@
       <button class="button-input" id = "but-autorization" data-hover="Выход" href="../index.html"><a id = "autorization" href="registration.html">Вход</a></button>
     </div>
   </span>
-  </div>
-  </header>
-
-  <div class="bar">
-  <canvas id="line-bar"></canvas>
-  </div>
-
-<div id="statistic">Статистика</div>
-  <div id="tasks"> </div>
-  <div id="hard"> </div>
-  <div id="easy"> </div>
-  <div id="people"> </div>
-  <div id="percent"> </div>
-
-  <footer class="footer-distributed">
-          <div class="footer-left">
-          <a class = "School" href="https://github.com/DaryaDan/personnelManagement" target="_blank">Ссылка на GitHub</a>
         </div>
-  </footer>
+    </header>
 
-  <script src="../scripts/requests.js"></script>
-  <script src="../scripts/menu.js"></script>
-  <script src="../scripts/statisticAdmin.js"></script>
-  </body>
-  </html>
+    <div class="bar">
+        <canvas id="line-bar"></canvas>
+    </div>
+
+    <div id="statistic">Статистика</div>
+    <div id="tasks"> </div>
+    <div id="hard"> </div>
+    <div id="easy"> </div>
+    <div id="people"> </div>
+    <div id="percent"> </div>
+
+    <footer class="footer-distributed">
+        <div class="footer-left">
+            <a class="School" href="https://github.com/DaryaDan/personnelManagement" target="_blank">Ссылка на GitHub</a>
+        </div>
+    </footer>
+
+    <script src="../scripts/requests.js"></script>
+    <script src="../scripts/menu.js"></script>
+    <script src="../scripts/statisticAdmin.js"></script>
+</body>
+
+</html>

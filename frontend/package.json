@@ -1,16 +1,16 @@
 {
-  "name": "frontend",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.html",
-  "scripts": {
-    "dev": "nodemon server.js"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.4"
-  },
-  "dependencies": {
-    "chart.js": "^2.9.4",
-    "fullcalendar": "^5.4.0"
-  }
+    "name": "frontend",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.html",
+    "scripts": {
+        "dev": "nodemon server.js"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.4"
+    },
+    "dependencies": {
+        "chart.js": "^2.9.4",
+        "fullcalendar": "^5.4.0"
+    }
 }

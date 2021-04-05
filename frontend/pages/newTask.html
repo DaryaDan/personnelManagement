@@ -1,43 +1,45 @@
 <!DOCTYPE HTML>
 <html>
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link href="../styles/style.css" rel="stylesheet">
-<link href="../styles/newTask.css" rel="stylesheet">
-<title>Новая задача</title>
-<link rel="icon" href="https://i.ibb.co/55g6YBc/image.png" type="image/x-icon">
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-<link href='http://fonts.googleapis.com/css?family=Questrial|Droid+Sans|Alice' rel='stylesheet' type='text/css'>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../styles/style.css" rel="stylesheet">
+    <link href="../styles/newTask.css" rel="stylesheet">
+    <title>Новая задача</title>
+    <link rel="icon" href="https://i.ibb.co/55g6YBc/image.png" type="image/x-icon">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Questrial|Droid+Sans|Alice' rel='stylesheet' type='text/css'>
 </head>
+
 <body>
     <header class="header">
 
-    <div class="nav-toggle">
-    	<div class="nav-toggle-bar"></div>
-    </div>
+        <div class="nav-toggle">
+            <div class="nav-toggle-bar"></div>
+        </div>
 
-    <nav id="nav" class="nav">
-        <ul class="menu">
-          <li><a href="aboutMeAdmin.html">Личный кабинет</a></li>
-          <li><a href="mainAdmin.html">Новости</a></li>
-          <li><a href="allStaff.html">Сотрудники</a></li>
-          <li class="p_menu"><a class = "link">Добавить</a>
-              <ul class="v_menu">
-                <li><a href="newUser.html">Пользователя</a></li>
-                <li><a href="news.html">Новость</a></li>
-              </ul>
-          </li>
-          <li><a href="correspondAdmin.html">Переписка</a></li>
-          <li><a href="statisticAdmin.html">Статистика</a></li>
-            <li><a href="registration.html" id="butExit">Вход</a></li>
-              </ul>
-      </nav>
+        <nav id="nav" class="nav">
+            <ul class="menu">
+                <li><a href="aboutMeAdmin.html">Личный кабинет</a></li>
+                <li><a href="mainAdmin.html">Новости</a></li>
+                <li><a href="allStaff.html">Сотрудники</a></li>
+                <li class="p_menu"><a class="link">Добавить</a>
+                    <ul class="v_menu">
+                        <li><a href="newUser.html">Пользователя</a></li>
+                        <li><a href="news.html">Новость</a></li>
+                    </ul>
+                </li>
+                <li><a href="correspondAdmin.html">Переписка</a></li>
+                <li><a href="statisticAdmin.html">Статистика</a></li>
+                <li><a href="registration.html" id="butExit">Вход</a></li>
+            </ul>
+        </nav>
 
-    <div class="line">
-      <p class="dropdown"><img src="https://i.ibb.co/fVJ5mmk/image.png" alt="Логотип" border="0" ></p>
-      <h3 class="dropdown">Моя компания</h3>
-      <span class = "contener">
+        <div class="line">
+            <p class="dropdown"><img src="https://i.ibb.co/fVJ5mmk/image.png" alt="Логотип" border="0"></p>
+            <h3 class="dropdown">Моя компания</h3>
+            <span class="contener">
         <div class="dropdown">
         <a href="aboutMeAdmin.html" class="dropbtn">Личный кабинет</a>
         </div>
@@ -64,79 +66,80 @@
       <button class="button-input" id = "but-autorization" data-hover="Выход" href="../index.html"><a id = "autorization" href="registration.html">Вход</a></button>
     </div>
   </span>
-  </div>
-  </header>
+        </div>
+    </header>
 
-<div id="content">
-  <h1>Добавьте новую задачу</h1>
-<form onsubmit="return false;">
-  <div class="element">
-    <label class="desc" id="title106" for="Field0">
+    <div id="content">
+        <h1>Добавьте новую задачу</h1>
+        <form onsubmit="return false;">
+            <div class="element">
+                <label class="desc" id="title106" for="Field0">
     Выберите сотрудника
     </label>
-    <div>
-    <select id="Field0" name="Field0" class="field select medium input" tabindex="11" required>
+                <div>
+                    <select id="Field0" name="Field0" class="field select medium input" tabindex="11" required>
        <option selected disabled hidden value=' '>Сотрудники</option>
     </select>
-    </div>
-  </div>
+                </div>
+            </div>
 
-  <div class="element">
-    <label class="desc" id="title1" for="Field1">Название задачи</label>
-    <div>
-      <input id="Field1" name="Field1" type="text" class="field text input" value="" size="8" tabindex="1" required>
-    </div>
-  </div>
+            <div class="element">
+                <label class="desc" id="title1" for="Field1">Название задачи</label>
+                <div>
+                    <input id="Field1" name="Field1" type="text" class="field text input" value="" size="8" tabindex="1" required>
+                </div>
+            </div>
 
-  <div class="element">
-    <label class="desc" id="title2" for="Field2">Описание</label>
-    <div>
-      <textarea id="Field2" class="input" name="Field2" spellcheck="true" rows="10" cols="50" tabindex="4" required></textarea>
-    </div>
-  </div>
+            <div class="element">
+                <label class="desc" id="title2" for="Field2">Описание</label>
+                <div>
+                    <textarea id="Field2" class="input" name="Field2" spellcheck="true" rows="10" cols="50" tabindex="4" required></textarea>
+                </div>
+            </div>
 
-  <div class="element">
-    <label class="desc" id="title3" for="Field3">
+            <div class="element">
+                <label class="desc" id="title3" for="Field3">
       Срок
     </label>
-    <div>
-      <input id="Field3" class="input" name="Field3" type="date" spellcheck="false" value="" required>
-   </div>
-  </div>
+                <div>
+                    <input id="Field3" class="input" name="Field3" type="date" spellcheck="false" value="" required>
+                </div>
+            </div>
 
-  <div class="element">
-    <label class="desc" id="title4" for="Field4">Подзадачи</label>
-    <div>
-      <input id="Field4" name="Field4" type="text" class="field text input Field4" value="" size="8" tabindex="1" required>
+            <div class="element">
+                <label class="desc" id="title4" for="Field4">Подзадачи</label>
+                <div>
+                    <input id="Field4" name="Field4" type="text" class="field text input Field4" value="" size="8" tabindex="1" required>
+                </div>
+            </div>
+
+            <div class="element">
+                <label class="desc" id="title5" for="Field5">Сложность задачи</label>
+                <div>
+                    <p><input class="input" name="typeT" type="radio" value="easy" checked style="text-align:center">Легкая</p>
+                    <p><input class="input" name="typeT" type="radio" value="medium">Средняя</p>
+                    <p><input class="input" name="typeT" type="radio" value="hard">Сложная</p>
+                </div>
+            </div>
+
+            <div class="element">
+                <input id="saveForm" name="saveForm" type="submit" value="Создать">
+                <input type="reset" value="Очистить" />
+                <span class="stage1"></span>
+            </div>
+
+        </form>
     </div>
-  </div>
 
-  <div class="element">
-    <label class="desc" id="title5" for="Field5">Сложность задачи</label>
-    <div>
-      <p><input class="input" name="typeT" type="radio" value="easy" checked style="text-align:center">Легкая</p>
-      <p><input class="input" name="typeT" type="radio" value="medium">Средняя</p>
-      <p><input class="input" name="typeT" type="radio" value="hard">Сложная</p>
-    </div>
-  </div>
-
-  <div class="element">
-  <input id="saveForm" name="saveForm" type="submit" value="Создать">
-   <input type="reset" value="Очистить"/>
-    <span class="stage1"></span>
-</div>
-
-</form>
-</div>
-
-<footer class="footer-distributed">
+    <footer class="footer-distributed">
         <div class="footer-left">
-        <a class = "School" href="https://github.com/DaryaDan/personnelManagement" target="_blank">Ссылка на GitHub</a>
-      </div>
-</footer>
+            <a class="School" href="https://github.com/DaryaDan/personnelManagement" target="_blank">Ссылка на GitHub</a>
+        </div>
+    </footer>
 
-  <script src="../scripts/menu.js"></script>
-<script src="../scripts/requests.js"></script>
-  <script src="../scripts/newTask.js"></script>
+    <script src="../scripts/menu.js"></script>
+    <script src="../scripts/requests.js"></script>
+    <script src="../scripts/newTask.js"></script>
 </body>
+
 </html>

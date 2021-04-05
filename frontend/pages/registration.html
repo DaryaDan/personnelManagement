@@ -1,82 +1,83 @@
 <!DOCTYPE HTML>
 <html>
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link href="../styles/style.css" rel="stylesheet">
-<title>Input</title>
-<link rel="icon" href="#" type="image/x-icon">
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../styles/style.css" rel="stylesheet">
+    <title>Input</title>
+    <link rel="icon" href="#" type="image/x-icon">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 </head>
+
 <body>
-  <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
-<div class="wrap_bg">
-    <div id="main" class="login_wrap loginActive">
-        <div class="login_question_wrap">
-            <div class="question_singUp ">
-                <h2 class="title">Нет аккаунта?</h2>
-                <p>Попросите главного зарегистрировать
-                  вас или используйте временный
-                  код для регистрации
-                </p>
-                <a href="javascript:void(0)" id="signUpBtn" class="btn btn_rounded">Зарегистрироваться</a>
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+    <div class="wrap_bg">
+        <div id="main" class="login_wrap loginActive">
+            <div class="login_question_wrap">
+                <div class="question_singUp ">
+                    <h2 class="title">Нет аккаунта?</h2>
+                    <p>Попросите главного зарегистрировать вас или используйте временный код для регистрации
+                    </p>
+                    <a href="javascript:void(0)" id="signUpBtn" class="btn btn_rounded">Зарегистрироваться</a>
+                </div>
+                <div class="question_login ">
+                    <h2 class="title">Есть аккаунт?</h2>
+                    <p>Войдите в аккаунт, используя свою почту и пароль
+                    </p>
+                    <a href="javascript:void(0)" id="loginBtn" class="btn btn_rounded">Войти</a>
+                </div>
+                <div class="action_singUp">
+                    <form onsubmit="return false;">
+                        <fieldset>
+                            <legend class="title">Регистрация</legend>
+                            <div class="input_block">
+                                <div class="input_wrap">
+                                    <input type="text" id="sing_name" class="input" placeholder="ФИО" required>
+                                    <label for="sing_name" class="label_name"></label>
+                                </div>
+                                <div class="input_wrap">
+                                    <input type="email" id="sing_email" class="input" placeholder="Почта" required>
+                                    <label for="sing_email" class="label_mail"></label>
+                                </div>
+                                <div class="input_wrap">
+                                    <input type="text" id="sing_pass" class="input" placeholder="Пароль" required>
+                                    <label for="sing_pass" class="label_pass"></label>
+                                </div>
+                                <div class="input_wrap">
+                                    <input type="text" id="code" class="input" placeholder="Временный код" required>
+                                    <label for="sing_code" class="label_code"></label>
+                                </div>
+                            </div>
+                            <span class="stage1"></span>
+                            <input type="submit" value="Зарегистрироваться" id="singup" class="btn btn_red">
+                        </fieldset>
+                    </form>
+                </div>
+                <div class="action_login">
+                    <form onsubmit="return false;">
+                        <fieldset>
+                            <legend class="title">Вход</legend>
+                            <div class="input_block">
+                                <div class="input_wrap">
+                                    <input type="email" id="mail" class="input" placeholder="Почта" required>
+                                </div>
+                                <div class="input_wrap">
+                                    <input type="text" id="pass" class="input" placeholder="Пароль" required>
+                                </div>
+                            </div>
+                            <span class="stage"></span>
+                            <input type="submit" value="Войти" id="login" class="btn btn_red">
+                        </fieldset>
+                    </form>
+                </div>
             </div>
-            <div class="question_login ">
-                <h2 class="title">Есть аккаунт?</h2>
-                <p>Войдите в аккаунт, используя свою почту и пароль
-                </p>
-                <a href="javascript:void(0)" id="loginBtn" class="btn btn_rounded">Войти</a>
+            <div class="login_action_wrap ">
             </div>
-            <div class="action_singUp">
-                <form onsubmit="return false;">
-                    <fieldset>
-                        <legend class="title">Регистрация</legend>
-                        <div class="input_block">
-                            <div class="input_wrap">
-                                <input type="text" id="sing_name" class="input" placeholder="ФИО" required>
-                                <label for="sing_name" class="label_name"></label>
-                            </div>
-                            <div class="input_wrap">
-                                <input type="email" id="sing_email" class="input" placeholder="Почта" required>
-                                <label for="sing_email" class="label_mail"></label>
-                            </div>
-                            <div class="input_wrap">
-                                <input type="text" id="sing_pass" class="input" placeholder="Пароль" required>
-                                <label for="sing_pass" class="label_pass"></label>
-                            </div>
-                            <div class="input_wrap">
-                                <input type="text" id="code" class="input" placeholder="Временный код" required>
-                                <label for="sing_code" class="label_code"></label>
-                            </div>
-                        </div>
-                        <span class="stage1"></span>
-                        <input type="submit" value="Зарегистрироваться" id="singup" class="btn btn_red">
-                    </fieldset>
-                </form>
-            </div>
-            <div class="action_login">
-              <form onsubmit="return false;">
-                    <fieldset>
-                        <legend class="title">Вход</legend>
-                        <div class="input_block">
-                            <div class="input_wrap">
-                                <input type="email" id="mail" class="input" placeholder="Почта" required>
-                            </div>
-                            <div class="input_wrap">
-                                <input type="text" id="pass" class="input" placeholder="Пароль" required>
-                            </div>
-                        </div>
-                        <span class="stage"></span>
-                        <input type="submit" value="Войти" id="login" class="btn btn_red">
-                    </fieldset>
-                </form>
-            </div>
-        </div>
-        <div class="login_action_wrap ">
         </div>
     </div>
-</div>
-  <script src="../scripts/requests.js"></script>
+    <script src="../scripts/requests.js"></script>
     <script src="../scripts/registration.js"></script>
-  </body>
-  </html>
+</body>
+
+</html>

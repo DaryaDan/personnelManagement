@@ -6,13 +6,13 @@ var Schema = mongoose.Schema;
 
 var Correspond = new Schema({
 
-  correspondID: { type: Number, Required:  'Product name cannot be left blank.' },
+    correspondID: { type: Number, Required: 'Product name cannot be left blank.' },
 
-  fullName: { type: String, Required:  'Product name cannot be left blank.' },
+    fullName: { type: String, Required: 'Product name cannot be left blank.' },
 
-  mail: { type: String, Required:  'Product name cannot be left blank.' },
+    mail: { type: String, Required: 'Product name cannot be left blank.' },
 
-  time: { type: String, Required:  'Product name cannot be left blank.' }
+    time: { type: String, Required: 'Product name cannot be left blank.' }
 
 });
 

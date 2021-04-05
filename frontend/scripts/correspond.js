@@ -29,86 +29,89 @@
 
   // Button/Enter Key
   sendMes.addEventListener('click', sendMessage)
-  input.addEventListener('keyup', function(evt){ if(evt.keyCode == 13) sendMessage() })
-  emojibtn.addEventListener('click', function(e){
-     e.stopPropagation()
-     this.classList.toggle('open')
+  input.addEventListener('keyup', function(evt) { if (evt.keyCode == 13) sendMessage() })
+  emojibtn.addEventListener('click', function(e) {
+      e.stopPropagation()
+      this.classList.toggle('open')
   })
-  document.body.addEventListener('click', function(){
-     emojibtn.classList.remove('open')
+  document.body.addEventListener('click', function() {
+      emojibtn.classList.remove('open')
   })
 
-  let urlMain=`http://localhost:3000/correspond`;
-let data = GetAll(urlMain).then(result => {
-  lengthMess=result.length;
-  result.forEach(mail => {
-  writeLine(mail.mail,mail.fullName,mail.time,mail.correspondID)})
-})
-
-window.setInterval(function(){ // Set interval for checking
-    let url=`http://localhost:3000/correspond`;
-  let data = GetAll(url).then(result => {
-      if (lengthMess!==result.length){
-          location.reload();
-      }
+  let urlMain = `http://localhost:3000/correspond`;
+  let data = GetAll(urlMain).then(result => {
+      lengthMess = result.length;
+      result.forEach(mail => {
+          writeLine(mail.mail, mail.fullName, mail.time, mail.correspondID)
+      })
   })
-}, 6000); // Repeat every 60000 milliseconds (1 minute)
 
-// Messenger Functions
-function sendMessage(){
-   var msg = input.value;
-   input.value = '';
-   name=localStorage.name;
-     var now = new Date().toLocaleString();
-     let id=lengthMess;
-     id++;
-   writeLine(msg,name,now,id);
-}
-function addMessage(evt){
-   console.log(evt);
-   var msg = evt.data ? JSON.parse(evt.data) : evt;
-   writeLine(`${msg.FROM}: ${msg.MESSAGE}`)
-}
-function writeLine(text,name,now,id){
-   var message = document.createElement('div')
-   message.classList.add('message')
-   message.innerHTML= `
+  window.setInterval(function() { // Set interval for checking
+      let url = `http://localhost:3000/correspond`;
+      let data = GetAll(url).then(result => {
+          if (lengthMess !== result.length) {
+              location.reload();
+          }
+      })
+  }, 6000); // Repeat every 60000 milliseconds (1 minute)
+
+  // Messenger Functions
+  function sendMessage() {
+      var msg = input.value;
+      input.value = '';
+      name = localStorage.name;
+      var now = new Date().toLocaleString();
+      let id = lengthMess;
+      id++;
+      writeLine(msg, name, now, id);
+  }
+
+  function addMessage(evt) {
+      console.log(evt);
+      var msg = evt.data ? JSON.parse(evt.data) : evt;
+      writeLine(`${msg.FROM}: ${msg.MESSAGE}`)
+  }
+
+  function writeLine(text, name, now, id) {
+      var message = document.createElement('div')
+      message.classList.add('message')
+      message.innerHTML = `
    <span id="${id}"><span class="lineName">${name}</span><span class="lineText">${text} </span><span class="lineTime">${now}</span></span>`
-   messages.appendChild(message)
-   messages.scrollTop = messages.scrollHeight;
-   if (id>lengthMess){
-     lengthMess++;
-   writeMessage(text,name,now,id);
- }
-}
+      messages.appendChild(message)
+      messages.scrollTop = messages.scrollHeight;
+      if (id > lengthMess) {
+          lengthMess++;
+          writeMessage(text, name, now, id);
+      }
+  }
 
-function writeMessage(text,name,now,id) {
-const body = {
-  correspondID: `${id}`,
-  fullName: `${name}`,
-  mail: `${text}`,
-  time: `${now}`
-};
-let dataAll = AddOne(urlMain,body);
-}
+  function writeMessage(text, name, now, id) {
+      const body = {
+          correspondID: `${id}`,
+          fullName: `${name}`,
+          mail: `${text}`,
+          time: `${now}`
+      };
+      let dataAll = AddOne(urlMain, body);
+  }
 
-// Load the Emojies
-for(var i = 0; i < emojis.length; i++){
-   if(emojis[i].name == null) continue
-   emojiwrapper.innerHTML += `
+  // Load the Emojies
+  for (var i = 0; i < emojis.length; i++) {
+      if (emojis[i].name == null) continue
+      emojiwrapper.innerHTML += `
       <img class="emoji-img" src="${emojis[i].name}"/>
    `
-}
+  }
 
-// Emoji Events
-var emojiElements = []
-setTimeout(function(){
-   emojiElements = document.querySelectorAll('.emoji-popup .emoji-img')
-   for(var i = 0; i < emojiElements.length; i++){
-      emojiElements[i].addEventListener('click', function(){
-         input.value = `<img style="width:48px; height: 48px" src="${this.getAttribute('src')}"/>`
-         sendMessage()
-         emojibtn.classList.remove('open')
-      })
-   }
-})
+  // Emoji Events
+  var emojiElements = []
+  setTimeout(function() {
+      emojiElements = document.querySelectorAll('.emoji-popup .emoji-img')
+      for (var i = 0; i < emojiElements.length; i++) {
+          emojiElements[i].addEventListener('click', function() {
+              input.value = `<img style="width:48px; height: 48px" src="${this.getAttribute('src')}"/>`
+              sendMessage()
+              emojibtn.classList.remove('open')
+          })
+      }
+  })
