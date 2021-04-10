@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="../styles/style.css" rel="stylesheet">
-    <link href="../styles/allStaff.css" rel="stylesheet">
-    <title>Коллеги</title>
+    <link href="../styles/mainUser.css" rel="stylesheet">
+    <title>Новости</title>
     <link rel="icon" href="https://i.ibb.co/55g6YBc/image.png" type="image/x-icon">
 </head>
 
@@ -19,15 +19,8 @@
 
         <nav id="nav" class="nav">
             <ul class="menu">
-                <li><a href="aboutMe.html">Личный кабинет</a></li>
-                <li><a href="mainUser.html">Новости</a></li>
-                <li class="p_menu"><a class="link">Мои задачи</a>
-                    <ul class="v_menu">
-                        <li><a href="myTasks.html">Список</a></li>
-                        <li><a href="calendar.html">Календарь</a></li>
-                        <li><a href="statistic.html">Статистика</a></li>
-                    </ul>
-                </li>
+                <li><a href="../index.html">О компании</a></li>
+                <li><a href="newColleagues.html">Сотрудники</a></li>
                 <li><a href="registration.html" id="butExit">Вход</a></li>
             </ul>
         </nav>
@@ -37,18 +30,10 @@
             <h3 class="dropdown">Моя компания</h3>
             <span class="contener">
         <div class="dropdown">
-        <a href="aboutMe.html" class="dropbtn">Личный кабинет</a>
+        <a href="../index.html" class="dropbtn">О компании</a>
         </div>
     <div class="dropdown">
-  <a href="mainUser.html" class="dropbtn">Новости</a>
-    </div>
-    <div class="dropdown">
-      <button class="dropbtn">Мои задачи</button>
-      <div class="dropdown-content">
-        <a href="myTasks.html">Список</a>
-        <a href="calendar.html">Календарь</a>
-        <a href="statistic.html">Статистика</a>
-      </div>
+    <a href="newColleagues.html" class="dropbtn">Сотрудники</a>
     </div>
     <div class="dropdown">
   <button class="button-input" id = "but-autorization" data-hover="Выход" href="../index.html"><a id = "autorization" href="registration.html">Вход</a></button>
@@ -57,10 +42,8 @@
         </div>
     </header>
 
-    <div class="all">
-        <main id="main"></main>
-        <main id="mainBack"></main>
-    </div>
+    <div class="newsTitle">Новости компании</div>
+    <main id="main"></main>
 
     <footer class="footer-distributed">
         <div class="footer-left">
@@ -70,7 +53,7 @@
 
     <script src="../scripts/requests.js"></script>
     <script src="../scripts/menu.js"></script>
-    <script src="../scripts/allStaff.js"></script>
+    <script src="../scripts/mainUser.js"></script>
 </body>
 
 </html>

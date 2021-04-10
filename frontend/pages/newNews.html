@@ -5,9 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="../styles/style.css" rel="stylesheet">
-    <link href="../styles/mainUser.css" rel="stylesheet">
-    <title>Новости</title>
+    <link href="../styles/newTask.css" rel="stylesheet">
+    <title>Новая новость</title>
     <link rel="icon" href="https://i.ibb.co/55g6YBc/image.png" type="image/x-icon">
+    <link href='http://fonts.googleapis.com/css?family=Questrial|Droid+Sans|Alice' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
@@ -19,8 +20,17 @@
 
         <nav id="nav" class="nav">
             <ul class="menu">
-                <li><a href="../index.html">О компании</a></li>
-                <li><a href="newColleagues.html">Сотрудники</a></li>
+                <li><a href="aboutMeAdmin.html">Личный кабинет</a></li>
+                <li><a href="mainAdmin.html">Новости</a></li>
+                <li><a href="allStaff.html">Сотрудники</a></li>
+                <li class="p_menu"><a class="link">Добавить</a>
+                    <ul class="v_menu">
+                        <li><a href="newUser.html">Пользователя</a></li>
+                        <li><a href="newTask.html">Задачу</a></li>
+                    </ul>
+                </li>
+                <li><a href="correspondAdmin.html">Переписка</a></li>
+                <li><a href="statisticAdmin.html">Статистика</a></li>
                 <li><a href="registration.html" id="butExit">Вход</a></li>
             </ul>
         </nav>
@@ -30,20 +40,68 @@
             <h3 class="dropdown">Моя компания</h3>
             <span class="contener">
         <div class="dropdown">
-        <a href="../index.html" class="dropbtn">О компании</a>
+        <a href="aboutMeAdmin.html" class="dropbtn">Личный кабинет</a>
+        </div>
+        <div class="dropdown">
+        <a href="mainAdmin.html" class="dropbtn">Новости</a>
         </div>
     <div class="dropdown">
-    <a href="newColleagues.html" class="dropbtn">Сотрудники</a>
+  <a href="allStaff.html" class="dropbtn">Сотрудники</a>
     </div>
     <div class="dropdown">
-  <button class="button-input" id = "but-autorization" data-hover="Выход" href="../index.html"><a id = "autorization" href="registration.html">Вход</a></button>
+      <button class="dropbtn">Добавить</button>
+      <div class="dropdown-content">
+        <a href="newUser.html">Пользователя</a>
+        <a href="newTask.html">Задачу</a>
+      </div>
+    </div>
+    <div class="dropdown">
+    <a href="correspondAdmin.html" class="dropbtn">Переписка</a>
+    </div>
+    <div class="dropdown">
+    <a href="statisticAdmin.html" class="dropbtn">Статистика</a>
+    </div>
+    <div class="dropdown">
+      <button class="button-input" id = "but-autorization" data-hover="Выход" href="../index.html"><a id = "autorization" href="registration.html">Вход</a></button>
     </div>
   </span>
         </div>
     </header>
 
-    <div class="newsTitle">Новости компании</div>
-    <main id="main"></main>
+    <div id="content">
+        <h1>Добавьте новую новость</h1>
+        <form onsubmit="return false;">
+            <div class="element">
+                <label class="desc" id="title106" for="Field0">
+      Выберите категорию новости
+      </label>
+                <div>
+                    <select id="Field1" name="Field1" class="field select medium input" tabindex="11" required>
+         <option selected disabled hidden value=' '>Категории</option>
+         <option value='Сотрудники'>Сотрудники</option>
+         <option value='Культура‎ и спорт'>Культура‎ и спорт</option>
+         <option value='Экономика‎'>Экономика‎</option>
+         <option value='Наука и технологии'>Наука и технологии</option>
+         <option value='Общество'>Общество</option>
+      </select>
+                </div>
+            </div>
+
+            <div class="element">
+                <label class="desc" id="title2" for="Field2">Новость</label>
+                <div>
+                    <textarea id="Field2" class="input" name="Field2" spellcheck="true" rows="10" cols="50" tabindex="4" required></textarea>
+                </div>
+            </div>
+
+            <div class="element">
+                <input id="saveForm" name="saveForm" type="submit" value="Создать" onclick="newNews();">
+                <input type="reset" value="Очистить" />
+                <span class="stage1"></span>
+            </div>
+
+        </form>
+    </div>
 
     <footer class="footer-distributed">
         <div class="footer-left">
@@ -53,7 +111,7 @@
 
     <script src="../scripts/requests.js"></script>
     <script src="../scripts/menu.js"></script>
-    <script src="../scripts/mainUser.js"></script>
+    <script src="../scripts/newNews.js"></script>
 </body>
 
 </html>

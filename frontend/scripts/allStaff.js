@@ -1,7 +1,7 @@
 (function allStaff() {
     let urlMain = `http://localhost:3000/main`;
     let urlDescription = `http://localhost:3000/description`;
-    if (localStorage.department === "Руководство") {
+    if (localStorage.department === "Руководство" || localStorage.department === undefined) {
         let dataGetPassword = GetAll(urlMain).then(result => (GetAll(urlDescription).then(data => staff(result, data))));
     } else {
         let dataGetPassword = GetAll(urlMain).then(result => {
