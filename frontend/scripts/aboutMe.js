@@ -1,6 +1,7 @@
 (function aboutMe() {
     document.getElementById('name').innerHTML = localStorage.name;
     document.getElementById('email').innerHTML = localStorage.email;
+    document.getElementById('department').innerHTML = localStorage.department;
     let urlDescription = `http://localhost:3000/description`;
     let dataAll = GetAll(urlDescription).then(result => comparison(result));
 })();
@@ -64,6 +65,7 @@ function changeAll(data, dat) {
         fullName: `${fullName}`,
         email: `${email}`,
         roots: `${roots}`,
+        department: `${localStorage.department}`,
         password: `${password}`
     };
     const bodyDescription = {

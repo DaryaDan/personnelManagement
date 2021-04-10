@@ -1,14 +1,27 @@
 (function allStaff() {
     let urlMain = `http://localhost:3000/main`;
     let urlDescription = `http://localhost:3000/description`;
-    let dataGetPassword = GetAll(urlMain).then(result => (GetAll(urlDescription).then(data => staff(result, data))));
+    if (localStorage.department === "Руководство") {
+        let dataGetPassword = GetAll(urlMain).then(result => (GetAll(urlDescription).then(data => staff(result, data))));
+    } else {
+        let dataGetPassword = GetAll(urlMain).then(result => {
+            let k = result.length;
+            let allPeoples = [];
+            for (let i = 0; i < k; i++) {
+                if (localStorage.department === result[i].department) {
+                    allPeoples.push(result[i]);
+                }
+            }
+            (GetAll(urlDescription).then(data => staff(allPeoples, data)))
+        });
+    }
 })();
+
 
 
 function staff(result, data) {
     let length = result.length;
     let lengthData = data.length;
-
     let staff;
     let str = ' ';
     if (length === 0) {
@@ -21,6 +34,7 @@ function staff(result, data) {
         for (let i = 0; i < length; i++) {
             if (+localStorage.personID !== result[i].personID) {
                 let name = result[i].fullName;
+                let department = result[i].department;
                 let img = 'https://morane.by/images/work1.png';
                 let position = "Должность не определена";
                 for (let k = 0; k < lengthData; k++) {
@@ -37,7 +51,7 @@ function staff(result, data) {
   </div>
     <div class="card-text">
           <h1 class="title">${name}</h1>
-          <h4 class="sub-title">${position}</h4>
+          <h4 class="sub-title">${department} (${position})</h4>
           </div>
     </div>`
 

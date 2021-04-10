@@ -46,6 +46,17 @@
      color: #9A9A9A;
  }
  
+ .title+.department {
+     margin-top: -25px;
+ }
+ 
+ .department {
+     font-weight: 700;
+     color: #9A9A9A;
+     line-height: 1.61em;
+     font-size: 1.2em;
+ }
+ 
  body {
      font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif;
  }
@@ -73,6 +84,10 @@
  }
  
  .profile-page .category {
+     text-align: center;
+ }
+ 
+ .profile-page .department {
      text-align: center;
  }
  
@@ -140,6 +155,10 @@
  }
  
  .page-header .category {
+     color: rgba(255, 255, 255, 0.8);
+ }
+ 
+ .page-header .department {
      color: rgba(255, 255, 255, 0.8);
  }
  

@@ -14,6 +14,8 @@ var Main = new Schema({
 
     roots: { type: Boolean, Required: 'Product category cannot be left blank' },
 
+    department: { type: String, Required: 'Product name cannot be left blank.' },
+
     password: { type: String, Required: 'Product category cannot be left blank' }
 
 });
