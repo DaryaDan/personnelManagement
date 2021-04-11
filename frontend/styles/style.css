@@ -475,6 +475,19 @@ body {
     background-color: #f78c7b;
 }
 
+.fieldSelect {
+    width: 100%;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    border: 0;
+    border-bottom: 2px solid #c1c4d6;
+    background-color: #f78c7b;
+    font-size: 13px;
+    color: rgb(118, 118, 118);
+    height: 38px;
+    outline: none;
+}
+
 .stage,
 .stage1 {
     text-decoration: none;
@@ -496,9 +509,9 @@ body {
 
 .login_action_wrap {
     position: absolute;
-    top: -40px;
+    top: -20px;
     left: 50px;
-    height: 430px;
+    height: 470px;
     width: 430px;
     background-color: #f7f7f6;
     border-radius: 3px;

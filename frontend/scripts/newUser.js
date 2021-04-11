@@ -20,6 +20,7 @@ a.onclick = function addData() {
     let img = document.getElementById('Field7').value;
     let birthday = document.getElementById('Field6').value;
     let position = document.getElementById('Field8').value;
+    let department = document.getElementById('Field9').value;
 
     if (fullName.length !== 0 && email.length !== 0 && password.length !== 0 && phone.length !== 0 && img.length !== 0 && birthday.length !== 0 && position.length !== 0) {
         const bodyMain = {
@@ -27,6 +28,7 @@ a.onclick = function addData() {
             fullName: `${fullName}`,
             email: `${email}`,
             roots: `${roots}`,
+            department: `${department}`,
             password: `${password}`
         };
         const bodyDescription = {
