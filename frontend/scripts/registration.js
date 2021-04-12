@@ -22,17 +22,19 @@ a.onclick = function putData() {
     let email = document.getElementById('sing_email').value;
     let password = document.getElementById('sing_pass').value;
     let code = document.getElementById('code').value;
+    let department = document.getElementById('Field9').value;
     let date = new Date();
     let day = date.getDay();
     if (day === 0) { day = 7 };
     let word = fullName[1];
-    let code1 = date.getFullYear() - date.getMonth() - date.getDate() - 1 + word + String(day); //год - месяц - дата + 2 буква ФИО + строка с днем недели
+    let code1 = date.getFullYear() - date.getMonth() - date.getDate() - 1 + word + String(day); //год - месяц - дата + 2 буква ФИО + строка с днем недели (число)
     if (fullName.length !== 0 && email.length !== 0 && password.length !== 0 && code === code1) {
         const body = {
             personID: `${personID}`,
             fullName: `${fullName}`,
             email: `${email}`,
             roots: `${roots}`,
+            department: `${department}`,
             password: `${password}`
         };
         let dataAll = AddOne(url, body);
@@ -65,6 +67,7 @@ function comparison(result) {
             localStorage.email = email;
             localStorage.name = result[i].fullName;
             localStorage.personID = result[i].personID;
+            localStorage.department = result[i].department;
             if (result[i].roots === true) {
                 document.location.href = "mainAdmin.html";
             } else { document.location.href = "mainUser.html"; }
